@@ -31,10 +31,11 @@ public class AffiClis extends HttpServlet {
        client.setNom("alilo");
        client.setPrenom("ali");
        
-         List<Client> clients = new ArrayList<Client>();
-         clients.add(client);
-      //  request.setAttribute("Clients", tableClients.recupererClients());
-        request.setAttribute("Clients", clients); 
+//         List<Client> clients = new ArrayList<Client>();
+//         clients.add(client);
+         Clients tableClient = new Clients();
+        request.setAttribute("Clients", tableClient.recupererClients());
+        //request.setAttribute("Clients", clients); 
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
     }

@@ -12,15 +12,23 @@ package com.tp.beans;
  */
 public class Client {
   private   String nom;
- private   String prenom;
-   private String Adress;
-  private  String tel;
-  private  String nationalite;
-  private  int NumpId;
+  private   String prenom;
+  private   String Adress;
+  private   String tel;
+  private   String nationalite;
+  private   int NumpId;
+
+    public Client() {
+    }
   
-
-   
-
+    public Client(String nom, String prenom, String Adress, String tel, String nationalite, int NumpId) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.Adress = Adress;
+        this.tel = tel;
+        this.nationalite = nationalite;
+        this.NumpId = NumpId;
+    }
  
 
     public String getNom() {

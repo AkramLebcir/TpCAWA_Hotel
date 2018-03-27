@@ -74,7 +74,7 @@ public class Clients {
         }
 
         try {
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaee", "root", "alilo");
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", "root");
         } catch (SQLException e) {
             e.printStackTrace();
         }
