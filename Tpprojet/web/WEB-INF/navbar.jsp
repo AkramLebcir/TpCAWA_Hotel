@@ -14,7 +14,7 @@
       <a class="navbar-brand" href="#">${ sessionScope.user }</a>
     </div>
     <ul class="nav navbar-nav navbar-left">
-        <li><a href="/Tpprojet/acuille">Accuill</a></li>
+       
     <li><a name="nav" href="/Tpprojet/AjouterCli">Ajouter Client</a></li>
     <li><a name="nav" href="/Tpprojet/AffiClis">Afficher Clients</a></li>
     </ul>

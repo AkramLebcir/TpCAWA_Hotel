@@ -32,7 +32,7 @@ public class Servlet1 extends HttpServlet {
            session.setAttribute("user", user);
           String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
               
-              try{
+             
                  if(!user.isEmpty()) {
                     if(user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo")){
                       request.setAttribute("user", user);
@@ -52,10 +52,8 @@ public class Servlet1 extends HttpServlet {
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                  }
-              }
-              catch(Exception e){
-                 out.println("remplir les chamep");
-              }
+              
+              
           
         } finally {
             out.close();
