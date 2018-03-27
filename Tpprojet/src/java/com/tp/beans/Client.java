@@ -16,18 +16,18 @@ public class Client {
   private   String Adress;
   private   String tel;
   private   String nationalite;
-  private   int NumpId;
+  private   int numpId;
 
     public Client() {
     }
   
-    public Client(String nom, String prenom, String Adress, String tel, String nationalite, int NumpId) {
+    public Client(String nom, String prenom, String Adress, String tel, String nationalite, int numpId) {
         this.nom = nom;
         this.prenom = prenom;
         this.Adress = Adress;
         this.tel = tel;
         this.nationalite = nationalite;
-        this.NumpId = NumpId;
+        this.numpId = numpId;
     }
  
 
@@ -54,7 +54,7 @@ public class Client {
     }
 
     public int getNumpId() {
-        return NumpId;
+        return numpId;
     }
 
     public void setNom(String nom) {
@@ -79,7 +79,7 @@ public class Client {
         this.nationalite = nationalite;
     }
 
-    public void setNumpId(int NumpId) {
-        this.NumpId = NumpId;
+    public void setNumpId(int numpId) {
+        this.numpId = numpId;
     }
 }

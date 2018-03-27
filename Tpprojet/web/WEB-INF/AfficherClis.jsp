@@ -19,14 +19,20 @@
          <%@ include file="navbar.jsp" %>
          <div class="container">
   
-            <h1>Hello World!</h1>
+            <h1>Lists Des Clients !</h1>
 
             <ul class="list-group">
                 <c:forEach var="utilisateur" items="${Clients}">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <c:out value="${ utilisateur.prenom }" /> 
-                        <c:out value="${ utilisateur.nom }" />
-                        <span class="badge badge-primary badge-pill">14</span>
+                        <c:out value="${ utilisateur.nom }" /><br>
+                        <c:out value="${ utilisateur.adress }" /> , 
+                        <c:out value="${ utilisateur.tel }" /><br>
+                        <c:out value="${ utilisateur.nationalite }" /> 
+                        
+                        <span class="badge badge-primary badge-pill">
+                            <c:out value="${ utilisateur.numpId }" />
+                        </span>
                     </li>
                 </c:forEach>
             </ul>

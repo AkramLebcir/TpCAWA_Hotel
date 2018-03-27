@@ -25,18 +25,9 @@ import javax.servlet.RequestDispatcher;
 public class AffiClis extends HttpServlet {
 
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       Client client = new Client();
-        //client.setNom(request.getParameter("nom"));
-       // client.setPrenom(request.getParameter("prenom"));
-       client.setNom("alilo");
-       client.setPrenom("ali");
-       
-//         List<Client> clients = new ArrayList<Client>();
-//         clients.add(client);
-         Clients tableClient = new Clients();
+        Clients tableClient = new Clients();
         request.setAttribute("Clients", tableClient.recupererClients());
-        //request.setAttribute("Clients", clients); 
-       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
+        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
     }
 
