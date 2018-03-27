@@ -59,7 +59,7 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
     <select name="department" class="form-control selectpicker">
       <option value="">Select votre Nationalite</option>
-      <option value="France" selected="selected">Algerie </option>
+      <option value="France" selected="selected">Select votre Nationalite</option>
 
 <option value="Afghanistan">Afghanistan </option>
 <option value="Afrique_Centrale">Afrique_Centrale </option>
