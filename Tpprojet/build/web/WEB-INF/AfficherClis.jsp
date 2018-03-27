@@ -17,11 +17,20 @@
     </head>
     <body>
          <%@ include file="navbar.jsp" %>
-        <h1>Hello World!</h1>
-    <ul>
-        <c:forEach var="utilisateur" items="${Clients}">
-            <li><c:out value="${ utilisateur.prenom }" /> test <c:out value="${ utilisateur.nom }" /></li>
-        </c:forEach>
-    </ul>  
+         <div class="container">
+  
+            <h1>Hello World!</h1>
+
+            <ul class="list-group">
+                <c:forEach var="utilisateur" items="${Clients}">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <c:out value="${ utilisateur.prenom }" /> 
+                        <c:out value="${ utilisateur.nom }" />
+                        <span class="badge badge-primary badge-pill">14</span>
+                    </li>
+                </c:forEach>
+            </ul>
+            <!-- Content here -->
+         </div>
     </body>
 </html>

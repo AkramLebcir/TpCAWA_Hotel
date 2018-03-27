@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/src/java/Servlet1.java</file>
-            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/nbproject/build-impl.xml</file>
+            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/src/java/com/tp/control/Clients.java</file>
+            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/src/java/com/tp/beans/Client.java</file>
+            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/src/java/com/tp/servlets/AffiClis.java</file>
+            <file>file:/Users/mac/Desktop/TpCAWA_Hotel/Tpprojet/web/WEB-INF/AfficherClis.jsp</file>
         </group>
     </open-files>
 </project-private>
