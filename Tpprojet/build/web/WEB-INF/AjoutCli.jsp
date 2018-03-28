@@ -35,7 +35,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="nom" placeholder="First Name" class="form-control"  type="text">
+  <input  name="nom" id="nom" placeholder="First Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -47,7 +47,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="prenom" placeholder="Last Name" class="form-control"  type="text">
+  <input name="prenom" id="prenom" placeholder="Last Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -57,7 +57,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="department" class="form-control selectpicker">
+        <select name="nationalite" id="nationalite" class="form-control selectpicker">
       <option value="">Select votre Nationalite</option>
       <option value="France" selected="selected">Select votre Nationalite</option>
 
@@ -322,11 +322,11 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Num piece de udentite</label> 
+  <label class="col-md-4 control-label" >Adress</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="user_password" placeholder="Password" class="form-control"  type="number">
+  <input name="adress" id="adress" placeholder="Adress" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -339,7 +339,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-        <input name="contact_no" placeholder="(0555)" class="form-control" type="tel">
+        <input name="tel" id="nationalite" placeholder="(0555)" class="form-control" type="tel">
     </div>
   </div>
 </div>

@@ -32,16 +32,14 @@ public class AffiClis extends HttpServlet {
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        Client client = new Client();
-        //client.setNom(request.getParameter("nom"));
-       // client.setPrenom(request.getParameter("prenom"));
-       client.setNom("alilo");
-       client.setPrenom("ali");
-       
-         List<Client> clients = new ArrayList<Client>();
-         clients.add(client);
-      //  request.setAttribute("Clients", tableClients.recupererClients());
-        request.setAttribute("Clients", clients); 
+        Client client = new Client(request.getParameter("nom"),
+                            request.getParameter("prenom"),
+                            request.getParameter("adress"),
+                            request.getParameter("tel"),
+                            request.getParameter("nationalite"),1);
+        Clients tableClient = new Clients();
+       tableClient.ajouterClient(client);
+        request.setAttribute("Clients", tableClient.recupererClients());
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
     }
