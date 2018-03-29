@@ -5,20 +5,9 @@
  * General styles
  */
 
-.navbar-inverse{
-    background-color: #4d2600 !important;
-}
-
-body, html {
-    height: 100%;
-/*    background-repeat: no-repeat;
-    background-image: url("https://geneva-intercontinental.com/wp-content/uploads/2015/06/Geneva-Luxury-Hotel_Luxurious-Landmark-Hotel_background.jpg")linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
-}
-
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
-    background-color: #efebe9 !important;
 }
 
 .btn {
@@ -48,15 +37,6 @@ body, html {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
 
 /*
  * Form styles
