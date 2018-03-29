@@ -66,11 +66,12 @@ public class Home extends HttpServlet {
           String pass= request.getParameter("pass");
             HttpSession session = request.getSession();
            session.setAttribute("user", user);
+           session.setAttribute("pass", pass);
           String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
               
              
                  if(!user.isEmpty()) {
-                    if(user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo")){
+                    if((user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram")&&pass.equalsIgnoreCase("root"))){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");

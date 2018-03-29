@@ -26,7 +26,7 @@ public class AffiClis extends HttpServlet {
 
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Clients tableClient = new Clients();
-        request.setAttribute("Clients", tableClient.recupererClients());
+        request.setAttribute("Clients", tableClient.recupererClients(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
     }
@@ -38,8 +38,8 @@ public class AffiClis extends HttpServlet {
                             request.getParameter("tel"),
                             request.getParameter("nationalite"),1);
         Clients tableClient = new Clients();
-       tableClient.ajouterClient(client);
-        request.setAttribute("Clients", tableClient.recupererClients());
+       tableClient.ajouterClient(client,request);
+        request.setAttribute("Clients", tableClient.recupererClients(request));
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
     }

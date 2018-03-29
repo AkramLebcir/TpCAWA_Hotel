@@ -27,7 +27,7 @@ public class AffichChaLib extends HttpServlet {
    
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
-        request.setAttribute("Chambres", tableChambre.recupererChambres());
+        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
                         rd.forward(request, response);
     }
@@ -45,8 +45,8 @@ public class AffichChaLib extends HttpServlet {
         Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,dureedebut,dureefin);
         
         Chambres tableChambre = new Chambres();
-       tableChambre.ajouterChambre(chambre);
-        request.setAttribute("Chambres", tableChambre.recupererChambres());
+       tableChambre.ajouterChambre(chambre,request);
+        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
                         rd.forward(request, response);
     }

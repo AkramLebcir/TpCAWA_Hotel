@@ -21,16 +21,16 @@
                     <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AjouterCham">Ajouter chambre</a>
+                    <a class="nav-link" href="/Tpprojet/AjouterCham">Add room</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AjouterCli">Ajouter Client</a>
+                    <a class="nav-link" href="/Tpprojet/AjouterCli">Add customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AffiClis">Afficher Clients</a>
+                    <a class="nav-link" href="/Tpprojet/AffiClis">View clients</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AffichChaLib">Afficher Chambres</a>
+                    <a class="nav-link" href="/Tpprojet/AffichChaLib">View rooms</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

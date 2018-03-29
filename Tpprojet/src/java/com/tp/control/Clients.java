@@ -15,6 +15,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -24,13 +26,14 @@ import java.util.List;
 
 public class Clients {
     private Connection connexion;
+    private String passBdd;
     
-    public List<Client> recupererClients() {
+    public List<Client> recupererClients(HttpServletRequest request) {
         List<Client> Clients = new ArrayList<Client>();
         Statement statement = null;
         ResultSet resultat = null;
 
-        loadDatabase();
+        loadDatabase(request);
         
         try {
             statement = connexion.createStatement();
@@ -75,22 +78,24 @@ public class Clients {
         return Clients;
     }
     
-    private void loadDatabase() {
+    private void loadDatabase(HttpServletRequest request) {
         // Chargement du driver
+        HttpSession session = request.getSession();
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
         }
 
         try {
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", "root");
+            passBdd = (String) session.getAttribute("pass");
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", passBdd);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     
-    public void ajouterClient(Client Client) {
-        loadDatabase();
+    public void ajouterClient(Client Client,HttpServletRequest request) {
+        loadDatabase(request);
         
         try {
             PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(nom, prenom, Adress, tel, nationalite) VALUES(?, ?, ?, ?, ?);");

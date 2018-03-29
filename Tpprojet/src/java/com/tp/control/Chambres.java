@@ -15,6 +15,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -22,13 +24,14 @@ import java.util.List;
  */
 public class Chambres {
     private Connection connexion;
+    private String passBdd;
     
-    public List<Chambre> recupererChambres() {
+    public List<Chambre> recupererChambres(HttpServletRequest request) {
         List<Chambre> Chambres = new ArrayList<Chambre>();
         Statement statement = null;
         ResultSet resultat = null;
 
-        loadDatabase();
+        loadDatabase(request);
         
         try {
             statement = connexion.createStatement();
@@ -75,22 +78,24 @@ public class Chambres {
         return Chambres;
     }
     
-    private void loadDatabase() {
+    private void loadDatabase(HttpServletRequest request) {
         // Chargement du driver
+        HttpSession session = request.getSession();
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
         }
 
         try {
+            passBdd = (String) session.getAttribute("pass");
             connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", "root");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     
-    public void ajouterChambre(Chambre Chambre) {
-        loadDatabase();
+    public void ajouterChambre(Chambre Chambre,HttpServletRequest request) {
+        loadDatabase(request);
         
         try {
             PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Chambre(num, etage, nomLit, prix, dispo, dureedebut, dureefin) VALUES(?, ?, ?, ?, ?, ?, ?);");
