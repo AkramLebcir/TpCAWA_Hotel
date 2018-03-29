@@ -15,18 +15,18 @@ import java.util.Date;
 public class Chambre {
    
             private int id;
-            private int num;
-            private int etage;
-            private int nomLit;
-            private float prix;
-            private boolean dispo;
+            private String num;
+            private String etage;
+            private String nomLit;
+            private String prix;
+            private String dispo;
             private String dureedebut;
             private String dureefin;
 
     public Chambre() {
     }
 
-    public Chambre(int id, int num, int etage, int nomLit, float prix, boolean dispo, String dureedebut, String dureefin) {
+    public Chambre(int id, String num, String etage, String nomLit, String prix, String dispo, String dureedebut, String dureefin) {
         this.id = id;
         this.num = num;
         this.etage = etage;
@@ -45,43 +45,43 @@ public class Chambre {
         this.id = id;
     }
 
-    public int getNum() {
+    public String getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(String num) {
         this.num = num;
     }
 
-    public int getEtage() {
+    public String getEtage() {
         return etage;
     }
 
-    public void setEtage(int etage) {
+    public void setEtage(String etage) {
         this.etage = etage;
     }
-    
-    public int getNomLit() {
+
+    public String getNomLit() {
         return nomLit;
     }
 
-    public void setNomLit(int nomLit) {
+    public void setNomLit(String nomLit) {
         this.nomLit = nomLit;
     }
 
-    public float getPrix() {
+    public String getPrix() {
         return prix;
     }
 
-    public void setPrix(float prix) {
+    public void setPrix(String prix) {
         this.prix = prix;
     }
 
-    public boolean isDispo() {
+    public String getDispo() {
         return dispo;
     }
 
-    public void setDispo(boolean dispo) {
+    public void setDispo(String dispo) {
         this.dispo = dispo;
     }
 
@@ -100,7 +100,6 @@ public class Chambre {
     public void setDureefin(String dureefin) {
         this.dureefin = dureefin;
     }
-    
-    
 
+    
 }

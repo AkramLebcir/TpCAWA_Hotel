@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <servlet>
-        <servlet-name>Servlet1</servlet-name>
-        <servlet-class>Servlet1</servlet-class>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>Home</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>acuille</servlet-name>
@@ -33,8 +33,8 @@
         <servlet-class>com.tp.servlets.AffiClis</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servlet1</servlet-name>
-        <url-pattern>/auth.html</url-pattern>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>acuille</servlet-name>

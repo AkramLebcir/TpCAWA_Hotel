@@ -63,7 +63,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   
-        <input name="nomLit" id="nomLit" placeholder="nbr de lit" class="form-control"  type="number">
+        <input name="nomLit" id="nomLit" placeholder="nbr de lit" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
        
-        <input name="prix" id="prix" placeholder="" class="form-control" type="number">
+        <input name="prix" id="prix" placeholder="" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -83,8 +83,8 @@
     <div class="col-md-4 inputGroupContainer">
  
     <div id="dispo" class="btn-group" data-toggle="buttons">
-    <label class="btn btn-success active"><input type="radio" name="radioGroup" value="yes">Yes</label>
-    <label class="btn btn-danger "><input type="radio" name="radioGroup" onclick="$('#mandatory2').val('no');">No</label>
+        <label class="btn btn-success active"><input type="radio" name="radioGroup" id="dispo" value="yes">Yes</label>
+        <label class="btn btn-danger "><input type="radio" name="radioGroup" id="dispo" onclick="$('#mandatory2').val('no');">No</label>
     </div>
           
 </div>
@@ -132,12 +132,13 @@
  <button type="submit" class="btn btn-warning" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
+</form>
 </div>
+       
          
+        
          
-         
-         
-         
+            
 <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
 <!-- Include jQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>

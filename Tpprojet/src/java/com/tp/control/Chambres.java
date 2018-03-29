@@ -34,27 +34,27 @@ public class Chambres {
             statement = connexion.createStatement();
 
             // Exécution de la requête
-            resultat = statement.executeQuery("SELECT id, num, etage FROM Chambre;");
+            resultat = statement.executeQuery("SELECT id, num, etage, nomLit, prix, dispo, dureedebut, dureefin FROM Chambre;");
             // Récupération des données
             while (resultat.next()) {
                 int id = resultat.getInt("id");
-                int num = resultat.getInt("num");
-                int etage = resultat.getInt("etage");
-//                int nomLit = resultat.getInt("nomLit");
-//                float prix = resultat.getFloat("prix");
-//                boolean dispo = resultat.getBoolean("dispo");
-//                String dureedebut = resultat.getString("dureedebut");
-//                String dureefin = resultat.getString("dureefin");
+                String num = resultat.getString("num");
+                String etage = resultat.getString("etage");
+                String nomLit = resultat.getString("nomLit");
+                String prix = resultat.getString("prix");
+                String dispo = resultat.getString("dispo");
+                String dureedebut = resultat.getString("dureedebut");
+                String dureefin = resultat.getString("dureefin");
                 
                 Chambre Chambre = new Chambre();
                 Chambre.setId(id);
                 Chambre.setNum(num);
                 Chambre.setEtage(etage);
-//                Chambre.setNomLit(nomLit);
-//                Chambre.setPrix(prix);
-//                Chambre.setDispo(dispo);
-//                Chambre.setDureedebut(dureedebut);
-//                Chambre.setDureefin(dureefin);
+                Chambre.setNomLit(nomLit);
+                Chambre.setPrix(prix);
+                Chambre.setDispo(dispo);
+                Chambre.setDureedebut(dureedebut);
+                Chambre.setDureefin(dureefin);
                 
                 Chambres.add(Chambre);
             }
@@ -83,7 +83,7 @@ public class Chambres {
         }
 
         try {
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3307/javaee", "root", "root");
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", "root");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -94,11 +94,11 @@ public class Chambres {
         
         try {
             PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Chambre(num, etage, nomLit, prix, dispo, dureedebut, dureefin) VALUES(?, ?, ?, ?, ?, ?, ?);");
-            preparedStatement.setInt(1, Chambre.getNum());
-            preparedStatement.setInt(2, Chambre.getEtage());
-            preparedStatement.setInt(3, Chambre.getNomLit());
-            preparedStatement.setFloat(4, Chambre.getPrix());
-            preparedStatement.setBoolean(5, Chambre.isDispo());
+            preparedStatement.setString(1, Chambre.getNum());
+            preparedStatement.setString(2, Chambre.getEtage());
+            preparedStatement.setString(3, Chambre.getNomLit());
+            preparedStatement.setString(4, Chambre.getPrix());
+            preparedStatement.setString(5, Chambre.getDispo());
             preparedStatement.setString(6,  Chambre.getDureedebut());
             preparedStatement.setString(7,  Chambre.getDureefin());
             

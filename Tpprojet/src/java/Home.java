@@ -17,11 +17,47 @@ import javax.servlet.http.HttpSession;
  *
  * @author alilo
  */
-public class Servlet1 extends HttpServlet {
+public class Home extends HttpServlet {
 
    
    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            HttpSession session = request.getSession();
+           String user = (String) session.getAttribute("user");
+          String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
+              
+                 if(!user.isEmpty()) {
+                    if(user.equalsIgnoreCase("alilo")){
+                      request.setAttribute("user", user);
+                      request.setAttribute("ERR", "");
+                        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");
+                        rd.forward(request, response);
+                    } 
+                    else{
+                        request.setAttribute("ERR", Eroor);
+                         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+                        rd.forward(request, response);
+                        session.invalidate();
+                    }
+                 }
+                 else{
+                     request.setAttribute("ERR", "remplir les chamep");
+                         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+                        rd.forward(request, response);
+                        session.invalidate();
+                 }
+
+        } finally {
+            out.close();
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -44,36 +80,19 @@ public class Servlet1 extends HttpServlet {
                         request.setAttribute("ERR", Eroor);
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
-                        
+                        session.invalidate();
                     }
                  }
                  else{
                      request.setAttribute("ERR", "remplir les chamep");
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
-                 }
-              
-              
+                        session.invalidate();
+                 }  
           
         } finally {
             out.close();
         }
     }
-
-    
-   
-
-    
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        doGet(request, response);
-    }
-
-   
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

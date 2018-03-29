@@ -25,8 +25,11 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <c:out value="${ chambre.num }" /> 
                         <c:out value="${ chambre.etage }" /><br>
-                        
-                        
+                        <c:out value="${ chambre.nomLit }" /> 
+                        <c:out value="${ chambre.prix }" />
+                        <c:out value="${ chambre.dispo }" /><br>
+                        <c:out value="${ chambre.dureedebut }" />
+                        <c:out value="${ chambre.dureefin }" />
                         <span class="badge badge-primary badge-pill">
                             <c:out value="${ chambre.id }" />
                         </span>

@@ -18,10 +18,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class acuille extends HttpServlet {
 
-    
-   
-
-   
      
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

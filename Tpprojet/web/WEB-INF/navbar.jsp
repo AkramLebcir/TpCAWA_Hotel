@@ -11,7 +11,7 @@
     
     <div class="navbar-collapse collapse">
         <div class="navbar-header">
-      <a class="navbar-brand" href="#">${ sessionScope.user }</a>
+      <a class="navbar-brand" href="home">${ sessionScope.user }</a>
     </div>
     <ul class="nav navbar-nav navbar-left">
        <li><a name="nav" href="/Tpprojet/AjouterCham">Ajouter cham</a></li>

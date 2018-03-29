@@ -28,31 +28,26 @@ public class AffichChaLib extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
         request.setAttribute("Chambres", tableChambre.recupererChambres());
-        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
+        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
                         rd.forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
-        int id = Integer.parseInt(request.getParameter("id"));
-        int num = Integer.parseInt(request.getParameter("num"));
-        int etage = Integer.parseInt(request.getParameter("etage"));
-//        int nomLit = Integer.parseInt(request.getParameter("nomLit"));
-//        Float prix = Float.valueOf(request.getParameter("prix"));
-//        Boolean dispo = Boolean.valueOf(request.getParameter("dispo"));
-//        String dureedebut = request.getParameter("dureedebut");
-//        String dureefin = request.getParameter("dureefin");
+        String num = request.getParameter("num");
+        String etage = request.getParameter("etage");
+        String nomLit = request.getParameter("nomLit");
+        String prix = request.getParameter("prix");
+        String dispo = request.getParameter("dispo");
+        String dureedebut = request.getParameter("dureedebut");
+        String dureefin = request.getParameter("dureefin");
                         
-        //Chambre chambre = new Chambre(id,num,etage,nomLit,prix,dispo,dureedebut,dureefin);
-        Chambre chambre = new Chambre();
-        chambre.setId(id);
-        chambre.setNum(num);
-        chambre.setEtage(etage);
+        Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,dureedebut,dureefin);
         
         Chambres tableChambre = new Chambres();
        tableChambre.ajouterChambre(chambre);
         request.setAttribute("Chambres", tableChambre.recupererChambres());
-       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
+       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
                         rd.forward(request, response);
     }
 }
