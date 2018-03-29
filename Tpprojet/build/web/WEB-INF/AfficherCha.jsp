@@ -15,14 +15,6 @@
         <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
         
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -32,24 +24,66 @@
          <div class="container">
   
             <h1>Lists Des Chambres !</h1>
+            
+            <div class="card">
+                <div class="card-body">
 
-            <ul class="list-group">
-                <c:forEach var="chambre" items="${Chambres}">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <c:out value="${ chambre.num }" /> 
-                        <c:out value="${ chambre.etage }" /><br>
-                        <c:out value="${ chambre.nomLit }" /> 
-                        <c:out value="${ chambre.prix }" />
-                        <c:out value="${ chambre.dispo }" /><br>
-                        <c:out value="${ chambre.dureedebut }" />
-                        <c:out value="${ chambre.dureefin }" />
-                        <span class="badge badge-primary badge-pill">
-                            <c:out value="${ chambre.id }" />
-                        </span>
-                    </li>
-                </c:forEach>
-            </ul>
+                    <!--Table-->
+                    <table class="table table-hover table-responsive-md table-fixed">
+
+                        <!--Table head-->
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Number</th>
+                                <th>Storey</th>
+                                <th>Number of beds</th>
+                                <th>Price</th>
+                                <th>Available</th>
+                                <th>Start date</th>
+                                <th>End date</th>
+                            </tr>
+                        </thead>
+                        <!--Table head-->
+
+                        <!--Table body-->
+                        <tbody>
+                            <c:forEach var="chambre" items="${Chambres}">
+                            <tr>
+                                <th scope="row">
+                                    <span class="badge badge-primary badge-pill">
+                                        <c:out value="${ chambre.id }" />
+                                    </span>
+                                </th>
+                                <td><c:out value="${ chambre.num }" /></td>
+                                <td><c:out value="${ chambre.etage }" /></td>
+                                <td><c:out value="${ chambre.nomLit }" /></td>
+                                <td><c:out value="${ chambre.prix }" /></td>
+                                <td><c:out value="${ chambre.dispo }" /></td>
+                                <td><c:out value="${ chambre.dureedebut }" /></td>
+                                <td><c:out value="${ chambre.dureefin }" /></td>
+                            </tr>
+                            </c:forEach>
+                        </tbody>
+                        <!--Table body-->
+
+                    </table>
+                    <!--Table-->
+
+                </div>
+            </div>         
             <!-- Content here -->
          </div>
+         
+         
+         
+         <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     </body>
 </html>

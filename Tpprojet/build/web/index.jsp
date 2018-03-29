@@ -40,8 +40,8 @@
                             <label for="user" >Username</label>
                         </div>
                         <div class="md-form">
-                            <input type="text" name="pass" id="pass" class="form-control">
-                            <label for="pass" >password</label>
+                            <input type="password" name="pass" id="pass" class="form-control">
+                            <label for="pass" >Password</label>
                         </div>
                         <div id="remember" class="checkbox">
                             <label>
