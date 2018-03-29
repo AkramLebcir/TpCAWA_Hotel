@@ -15,8 +15,9 @@
     </div>
     <ul class="nav navbar-nav navbar-left">
        <li><a name="nav" href="/Tpprojet/AjouterCham">Ajouter cham</a></li>
-    <li><a name="nav" href="/Tpprojet/AjouterCli">Ajouter Client</a></li>
-    <li><a name="nav" href="/Tpprojet/AffiClis">Afficher Clients</a></li>
+        <li><a name="nav" href="/Tpprojet/AjouterCli">Ajouter Client</a></li>
+        <li><a name="nav" href="/Tpprojet/AffiClis">Afficher Clients</a></li>
+        <li><a name="nav" href="/Tpprojet/AffichChaLib">Afficher Chambres</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#about">Right</a></li>

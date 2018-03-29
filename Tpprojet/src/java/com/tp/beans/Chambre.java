@@ -6,7 +6,7 @@
 
 package com.tp.beans;
 
-import java.sql.Time;
+import java.util.Date;
 
 /**
  *
@@ -14,59 +14,93 @@ import java.sql.Time;
  */
 public class Chambre {
    
-            private int Num;
-            private int Etage;
-            private int NomLit;
-            private float Prix;
-            private boolean Dispo;
-            private String Duree;
+            private int id;
+            private int num;
+            private int etage;
+            private int nomLit;
+            private float prix;
+            private boolean dispo;
+            private String dureedebut;
+            private String dureefin;
+
+    public Chambre() {
+    }
+
+    public Chambre(int id, int num, int etage, int nomLit, float prix, boolean dispo, String dureedebut, String dureefin) {
+        this.id = id;
+        this.num = num;
+        this.etage = etage;
+        this.nomLit = nomLit;
+        this.prix = prix;
+        this.dispo = dispo;
+        this.dureedebut = dureedebut;
+        this.dureefin = dureefin;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getNum() {
-        return Num;
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public int getEtage() {
-        return Etage;
+        return etage;
     }
 
+    public void setEtage(int etage) {
+        this.etage = etage;
+    }
+    
     public int getNomLit() {
-        return NomLit;
+        return nomLit;
+    }
+
+    public void setNomLit(int nomLit) {
+        this.nomLit = nomLit;
     }
 
     public float getPrix() {
-        return Prix;
+        return prix;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
     }
 
     public boolean isDispo() {
-        return Dispo;
+        return dispo;
     }
 
-    public String getDuree() {
-        return Duree;
+    public void setDispo(boolean dispo) {
+        this.dispo = dispo;
     }
 
-    public void setNum(int Num) {
-        this.Num = Num;
+    public String getDureedebut() {
+        return dureedebut;
     }
 
-    public void setEtage(int Etage) {
-        this.Etage = Etage;
+    public void setDureedebut(String dureedebut) {
+        this.dureedebut = dureedebut;
     }
 
-    public void setNomLit(int NomLit) {
-        this.NomLit = NomLit;
+    public String getDureefin() {
+        return dureefin;
     }
 
-    public void setPrix(float Prix) {
-        this.Prix = Prix;
-    }
-
-    public void setDispo(boolean Dispo) {
-        this.Dispo = Dispo;
-    }
-
-    public void setDuree(String Duree) {
-        this.Duree = Duree;
+    public void setDureefin(String dureefin) {
+        this.dureefin = dureefin;
     }
     
+    
+
 }

@@ -25,7 +25,7 @@
          <%@ include file="navbar.jsp" %>
         
 <div class="container" id="cham_for">
-<form class="well form-horizontal" action="AjouterCham" method="post"  id="contact_form">
+<form class="well form-horizontal" action="AffichChaLib" method="post"  id="contact_form">
 
 
 <!-- Form Name de form -->
@@ -38,7 +38,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
  
-  <input  name="nom" placeholder="Numero de la chambre" class="form-control"  type="text">
+      <input  name="num" id="num" placeholder="Numero de la chambre" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -50,7 +50,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
  
-  <input name="prenom" placeholder="nemero de l'etage" class="form-control"  type="text">
+        <input name="etage" id="etage" placeholder="nemero de l'etage" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -63,7 +63,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   
-  <input name="user_password" placeholder="nbr de lit" class="form-control"  type="number">
+        <input name="nomLit" id="nomLit" placeholder="nbr de lit" class="form-control"  type="number">
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
        
-        <input name="contact_no" placeholder="" class="form-control" type="number">
+        <input name="prix" id="prix" placeholder="" class="form-control" type="number">
     </div>
   </div>
 </div>
@@ -102,7 +102,7 @@
          <i class="fa fa-calendar">
          </i>
         </div>
-        <input class="form-control" id="date" name="datedebut" placeholder="MM/DD/YYYY" type="text"/>
+        <input class="form-control" id="dureedebut" name="dureedebut" placeholder="MM/DD/YYYY" type="text"/>
        
      
             </div>
@@ -118,7 +118,7 @@
          <i class="fa fa-calendar">
          </i>
         </div>
-        <input class="form-control" id="date" name="datefin" placeholder="MM/DD/YYYY" type="text"/>
+        <input class="form-control" id="dureefin" name="dureefin" placeholder="MM/DD/YYYY" type="text"/>
        
      
             </div>

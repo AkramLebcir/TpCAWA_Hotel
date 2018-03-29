@@ -55,10 +55,5 @@ public class AjouterCham extends HttpServlet {
         processRequest(request, response);
     }
 
-   
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }
 
 }
