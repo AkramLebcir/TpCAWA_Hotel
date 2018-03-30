@@ -25,42 +25,37 @@
         
       <%@ include file="navbar.jsp" %>
         
-        <div class="container" id="Regst">
+       <div class="card" style="width:500px">
 
     <form class="well form-horizontal" action="AffiClis" method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
-<legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+<legend><center><h2><b>Ajouter client</b></h2></center></legend><br>
 
 <!-- Text input-->
 
-<div class="form-group">
+
   <label class="col-md-4 control-label">Nom</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
+  
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input  name="nom" id="nom" placeholder="First Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+  <br>
 
 <!-- Text input-->
 
-<div class="form-group">
+
   <label class="col-md-4 control-label" >Prenom</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
+    
+    
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input name="prenom" id="prenom" placeholder="Last Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+  <br>
 
-  <div class="form-group"> 
+   
   <label class="col-md-4 control-label">Nationalite</label>
-    <div class="col-md-4 selectContainer">
-    <div class="input-group">
+    
+    
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
         <select name="nationalite" id="nationalite" class="form-control selectpicker">
       <option value="">Select votre Nationalite</option>
@@ -319,40 +314,34 @@
 <option value="Zambie">Zambie </option>
 <option value="Zimbabwe">Zimbabwe </option>
     </select>
-  </div>
-</div>
-</div>
+        <br>
   
 
 <!-- Text input-->
 
-<div class="form-group">
+
   <label class="col-md-4 control-label" >Adress</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
+    
+    
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input name="adress" id="adress" placeholder="Adress" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+  <br>
 
 <!-- Text input-->
 
        
-<div class="form-group">
+
   <label class="col-md-4 control-label">Contact No.</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
+    
+    
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
         <input name="tel" id="nationalite" placeholder="(0555)" class="form-control" type="tel">
-    </div>
-  </div>
-</div>
-<div class="form-group">
+        <br>
+
   <label class="col-md-4 control-label"></label>
-  <div class="col-md-4"><br>
- <button type="submit" class="btn btn-warning" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
-  </div>
+  <div class="text-center py-4 mt-3">
+ <button type="submit" class="btn btn-primary" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
+ </div>
 </div>
 
 
