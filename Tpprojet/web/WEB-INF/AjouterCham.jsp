@@ -16,6 +16,19 @@
         <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
         
+        
+        
+          <!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+        
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/togel.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,7 +45,9 @@
 
 <!-- Card -->
 <div class="card" style="width:500px">
+    
 <legend><center><h2><b>Ajouter une chambre</b></h2></center></legend><br>
+<form class="well form-horizontal" action="AffichChaLib" method="post"  id="contact_form">
     <!-- Card body -->
     <div class="card-body" >
 
@@ -93,14 +108,28 @@
 
     </div>
     <!-- Card body -->
-
+</form>
 </div>
 
 <!-- Card -->
                       
 
 
-
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="dureedebut"]'); //our date input has the name "date"
+      var date_input2=$('input[name="dureefin"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+      date_input2.datepicker(options);
+    })
+</script>
 
 
 
@@ -136,13 +165,6 @@
         
          
          
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script> 
+     
     </body>
 </html>

@@ -88,7 +88,7 @@ public class Clients {
 
         try {
             passBdd = (String) session.getAttribute("pass");
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaee", "root", passBdd);
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaee", "root", passBdd);
         } catch (SQLException e) {
             e.printStackTrace();
         }

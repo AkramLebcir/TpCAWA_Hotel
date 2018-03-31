@@ -58,7 +58,7 @@
     
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
         <select name="nationalite" id="nationalite" class="form-control selectpicker">
-      <option value="">Select votre Nationalite</option>
+   
       <option value="France" selected="selected">Select votre Nationalite</option>
 
 <option value="Afghanistan">Afghanistan </option>
@@ -328,7 +328,12 @@
   <br>
 
 <!-- Text input-->
-
+<label class="col-md-5 control-label">Piece d'identite No</label>  
+    
+    
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+        <input name="Pid" id="nationalite" placeholder="" class="form-control" type="tel">
+        <br>
        
 
   <label class="col-md-4 control-label">Contact No.</label>  
