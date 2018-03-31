@@ -47,6 +47,7 @@
 <div class="card" style="width:500px">
     
 <legend><center><h2><b>Ajouter une chambre</b></h2></center></legend><br>
+<p id="profile-name" class="profile-name-card">${ERRCh}</p>
 <form class="well form-horizontal" action="AffichChaLib" method="post"  id="contact_form">
     <!-- Card body -->
     <div class="card-body" >

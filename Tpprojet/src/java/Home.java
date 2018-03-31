@@ -45,7 +45,7 @@ public class Home extends HttpServlet {
                     }
                  }
                  else{
-                     request.setAttribute("ERR", "remplir les chamep");
+                     request.setAttribute("ERR", "remplir tout les chamep");
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                         session.invalidate();

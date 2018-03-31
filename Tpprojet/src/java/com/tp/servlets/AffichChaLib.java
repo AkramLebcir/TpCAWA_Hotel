@@ -42,6 +42,18 @@ public class AffichChaLib extends HttpServlet {
         String dureedebut = request.getParameter("dureedebut");
         String dureefin = request.getParameter("dureefin");
                         
+        if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase("")||dureedebut.equalsIgnoreCase("")||dureefin.equalsIgnoreCase(""))
+        {
+            request.setAttribute("ERRCh", "remplir tout les chamep");
+                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
+                        rd.forward(request, response);
+            
+        }
+        else{
+        
+        
+        
+        
         Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,dureedebut,dureefin);
         
         Chambres tableChambre = new Chambres();
@@ -49,5 +61,6 @@ public class AffichChaLib extends HttpServlet {
         request.setAttribute("Chambres", tableChambre.recupererChambres(request));
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
                         rd.forward(request, response);
+        }
     }
 }

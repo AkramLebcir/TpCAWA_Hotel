@@ -32,16 +32,29 @@ public class AffiClis extends HttpServlet {
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        Client client = new Client(request.getParameter("nom"),
-                            request.getParameter("prenom"),
-                            request.getParameter("adress"),
-                            request.getParameter("tel"),
-                            request.getParameter("nationalite"),1);
+        
+           String  nom = request.getParameter("nom");
+                               String prenom  = request.getParameter("prenom");
+                               String adress  = request.getParameter("adress");
+                               String tel  = request.getParameter("tel");
+                               String nationalite  = request.getParameter("nationalite");
+        
+        
+       if(nom.equalsIgnoreCase("")||prenom.equalsIgnoreCase("")||adress.equalsIgnoreCase("")||tel.equalsIgnoreCase(""))
+        {
+            request.setAttribute("ERRCh", "remplir tout les chamep");
+                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjoutCli.jsp");
+                        rd.forward(request, response);
+            
+        }else{
+        
+        Client client = new Client(nom,prenom,adress,tel,nationalite,1);
         Clients tableClient = new Clients();
        tableClient.ajouterClient(client,request);
         request.setAttribute("Clients", tableClient.recupererClients(request));
        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
+       }
     }
     
     
