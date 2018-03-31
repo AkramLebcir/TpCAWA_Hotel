@@ -85,6 +85,7 @@
     <label class="col-md-4 control-label">Disponible </label> 
     <br>
   <label class="switch">
+      
   <input type="checkbox">
   <span class="slider round"></span>
 </label>
