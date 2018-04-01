@@ -25,6 +25,7 @@ import javax.servlet.http.HttpSession;
 public class Chambres {
     private Connection connexion;
     private String passBdd;
+    private String portBdd;
     
     public List<Chambre> recupererChambres(HttpServletRequest request) {
         List<Chambre> Chambres = new ArrayList<Chambre>();
@@ -88,7 +89,12 @@ public class Chambres {
 
         try {
             passBdd = (String) session.getAttribute("pass");
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaee", "root", passBdd);
+            if(passBdd.equals("root")){
+                portBdd = "8889";
+            }else{
+                portBdd = "3306";
+            }
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:"+portBdd+"/javaee", "root", passBdd);
         } catch (SQLException e) {
             e.printStackTrace();
         }

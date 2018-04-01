@@ -32,6 +32,10 @@
         <servlet-name>AffiClis</servlet-name>
         <servlet-class>com.tp.servlets.AffiClis</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Sinup</servlet-name>
+        <servlet-class>com.tp.servlets.Sinup</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>AffiClis</servlet-name>
         <url-pattern>/AffiClis</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Sinup</servlet-name>
+        <url-pattern>/Sinup</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

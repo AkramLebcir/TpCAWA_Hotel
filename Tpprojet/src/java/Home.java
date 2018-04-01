@@ -31,7 +31,7 @@ public class Home extends HttpServlet {
           String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
               
                  if(!user.isEmpty()) {
-                    if(user.equalsIgnoreCase("alilo")){
+                    if(user.equalsIgnoreCase("alilo")||user.equalsIgnoreCase("akram")){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");
@@ -71,7 +71,7 @@ public class Home extends HttpServlet {
               
              
                  if(!user.isEmpty()) {
-                    if((user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram")&&pass.equalsIgnoreCase("root"))){
+                    if((user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram") && pass.equalsIgnoreCase("root"))){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");

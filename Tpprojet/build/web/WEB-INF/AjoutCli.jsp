@@ -35,7 +35,7 @@
 
 <!-- Text input-->
 
-
+<p id="profile-name" class="profile-name-card">${ERRCh}</p>
   <label class="col-md-4 control-label">Nom</label>  
   
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
