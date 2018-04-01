@@ -21,10 +21,10 @@
                     <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AjouterCham">Add room</a>
+                    <a class="nav-link" href="/Tpprojet/AjouterCli">Add client</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Tpprojet/AjouterCli">Add customer</a>
+                    <a class="nav-link" href="/Tpprojet/AjouterCham">Add room</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Tpprojet/AffiClis">View clients</a>
