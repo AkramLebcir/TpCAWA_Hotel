@@ -19,22 +19,32 @@
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            .card {
+                width:35%;
+            }
+
+            @media (max-width: 755px) {
+                .card{
+                    width:75%;
+                }
+            }
+        </style>
     </head>
     <body>
            
         
       <%@ include file="navbar.jsp" %>
         
-    <div class="card">
+      <div class="card">
 
     <form class="well form-horizontal" action="AffiClis" method="post"  id="contact_form">
-        <fieldset>
+        <div class="card-body" >
 
         <!-- Form Name -->
-        <legend><center><h2><b>Add Client</b></h2></center></legend>
+        <legend><center><h2>Add Client</h2></center></legend>
 
         <!-- Text input-->
-
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
 
         <div class="md-form">
@@ -43,17 +53,11 @@
         </div>
 
         <!-- Text input-->
-
         <div class="md-form">
             <input type="text" name="prenom" id="prenom" class="form-control">
             <label for="form1" >Prenom</label>
         </div>
                 <br>
-
-
-
-
-
 
         <label class="col-md-4 control-label">Nationalite</label><br>
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
@@ -314,9 +318,7 @@
         <option value="Zimbabwe">Zimbabwe </option>
             </select>
 
-
         <!-- Text input-->
-
         <div class="md-form">
             <input type="text" name="adress" id="adress" class="form-control">
             <label for="form1" >Address</label>
@@ -324,7 +326,6 @@
 
 
         <!-- Text input-->
-
         <div class="md-form">
             <input type="text" name="Pid" id="Pid" class="form-control">
             <label for="form1" >Piece d'identite No</label>
@@ -338,9 +339,8 @@
 
         <div class="text-center mt-4">
                 <button class="btn btn-primary" type="submit">Save</button>
-            </div>
-
-        </fieldset>
+        </div>
+        </div>
     </form>
 </div>
 

@@ -33,6 +33,17 @@
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/togel.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ajouetr Page</title>
+        <style>
+            .card {
+                width:35%;
+            }
+
+            @media (max-width: 755px) {
+                .card{
+                    width:75%;
+                }
+            }
+        </style>
     </head>
     <body>
         
@@ -43,130 +54,96 @@
         
 
 
-<!-- Card -->
-<div class="card" style="width:500px">
-    
-<legend><center><h2><b>Ajouter une chambre</b></h2></center></legend><br>
-<p id="profile-name" class="profile-name-card">${ERRCh}</p>
-<form class="well form-horizontal" action="AffichChaLib" method="post"  id="contact_form">
-    <!-- Card body -->
-    <div class="card-body" >
+        <!-- Card -->
+        <div class="card">
 
-        <!-- Material form register -->
-        
-        <label for="num">Numero de la chambre</label>  
+        <form class="well form-horizontal" action="AffichChaLib" method="post"  id="contact_form">
+            <!-- Card body -->
+            <div class="card-body" >
+                <legend><center><h2>Ajouter une chambre</h2></center></legend>
+                <p id="profile-name" class="profile-name-card">${ERRCh}</p>
 
-     <input  name="num" id="num" placeholder="Numero de la chambre" class="form-control"  type="text">
-   
-<br>
-
-<!-- Text input-->
+                <!-- Material form register -->
+                <div class="md-form">
+                    <input type="text" name="num" id="num" class="form-control">
+                    <label for="form1" >Numero de la chambre</label>
+                </div>
 
 
-  <label class="col-md-4 control-label" >Etage</label> 
-  <input name="etage" id="etage" placeholder="nemero de l'etage" class="form-control"  type="text">
-   
-  <br>
+                   <!-- Text input-->
 
+                <div class="md-form">
+                    <input type="text" name="etage" id="etage" class="form-control">
+                    <label for="form1" >Etage</label>
+                </div>
 
-<!-- Text input-->
+                   <!-- Text input-->
+                <div class="md-form">
+                    <input type="text" name="nomLit" id="nomLit" class="form-control">
+                    <label for="form1" >Numbre  de lit</label>
+                </div>
 
+                   <!-- Text input-->  
+                <div class="md-form">
+                    <input type="text" name="prix" id="prix" class="form-control">
+                    <label for="form1" >Prix</label>
+                </div>
 
-  <label class="col-md-4 control-label" >Numbre  de lit</label> 
-    <input name="nomLit" id="nomLit" placeholder="nbr de lit" class="form-control"  type="text">
-   
-    <br>
-<!-- Text input-->  
+                   <br>
 
-  <label class="col-md-4 control-label">Prix.</label>  
-     <input name="prix" id="prix" placeholder="" class="form-control" type="text">
-     <br>
+                       <label class="col-md-4 control-label">Disponible </label> 
+                       <br>
+                     <label class="switch">
 
-    <label class="col-md-4 control-label">Disponible </label> 
-    <br>
-  <label class="switch">
-      
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
-         
-    <br>
-    <br>
-<label class="control-label col-md-4 requiredField" for="datedebut">Date debut </label>
-  <input class="form-control" id="dureedebut" name="dureedebut" placeholder="MM/DD/YYYY" type="text"/>
-  <br>
-     <label class="control-label col-md-4 requiredField" for="datefin">Date fin </label>
-   <input class="form-control" id="dureefin" name="dureefin" placeholder="MM/DD/YYYY" type="text"/>
-       
-     
-          
-      
+                     <input type="checkbox" name="dispo" id="dispo">
+                     <span class="slider round"></span>
+                   </label>
 
-            <div class="text-center py-4 mt-3">
-                <button type="submit" class="btn btn-primary" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
-            </div>
-        </form>
-        <!-- Material form register -->
+                <div class="md-form">
+                    <input type="text" id="dureedebut" name="dureedebut" class="form-control">
+                    <label for="datedebut" >Date debut</label>
+                </div>
+                <div class="md-form">
+                    <input type="text" id="dureefin" name="dureefin" class="form-control">
+                    <label for="datefin" >Date fin</label>
+                </div>
 
-    </div>
-    <!-- Card body -->
-</form>
+                <div class="text-center py-4 mt-3">
+                    <button type="submit" class="btn btn-primary" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </form>
+            <!-- Material form register -->
+
+        </div>
+        <!-- Card body -->
+    </form>
 </div>
 
 <!-- Card -->
                       
 
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+          var date_input=$('input[name="dureedebut"]'); //our date input has the name "date"
+          var date_input2=$('input[name="dureefin"]'); //our date input has the name "date"
+          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+          var options={
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+          };
+          date_input.datepicker(options);
+          date_input2.datepicker(options);
+        })
+    </script>
 
-<script>
-    $(document).ready(function(){
-      var date_input=$('input[name="dureedebut"]'); //our date input has the name "date"
-      var date_input2=$('input[name="dureefin"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-      date_input2.datepicker(options);
-    })
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
-        
-         
-         
-     
     </body>
 </html>

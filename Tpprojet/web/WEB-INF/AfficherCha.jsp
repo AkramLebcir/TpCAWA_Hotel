@@ -22,11 +22,10 @@
     <body>
         <%@ include file="navbar.jsp" %>
          <div class="container">
-  
-            <h1>Lists Des Chambres !</h1>
             
             <div class="card">
                 <div class="card-body">
+                    <h3>Lists Des Chambres !</h3>
 
                     <!--Table-->
                     <table class="table table-hover table-responsive-md table-fixed">

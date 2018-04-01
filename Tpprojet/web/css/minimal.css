@@ -32,12 +32,11 @@
 .card {
     /* just in case there no content*/
     margin: 0 auto 25px;
-    margin-top: 50px;
-    width:35%;
-    padding: 30px;
+    margin-top: 80px;
+    padding: 10px;
 }
 
-
+           
 /*
  * Form styles
  */
