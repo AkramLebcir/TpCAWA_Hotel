@@ -40,23 +40,25 @@ public class Clients {
             statement = connexion.createStatement();
 
             // Exécution de la requête
-            resultat = statement.executeQuery("SELECT NumpId, nom, prenom, Adress, tel, nationalite FROM Client;");
+            resultat = statement.executeQuery("SELECT id,NumpId, nom, prenom, Address, tel, nationalite FROM Client;");
 
             // Récupération des données
             while (resultat.next()) {
-                int NumpId = resultat.getInt("NumpId");
+                int id = resultat.getInt("id");
+                String NumpId = resultat.getString("NumpId");
                 String nom = resultat.getString("nom");
                 String prenom = resultat.getString("prenom");
-                String Adress = resultat.getString("Adress");
+                String Address = resultat.getString("Address");
                 String tel = resultat.getString("tel");
                 String nationalite = resultat.getString("nationalite");
                 
                 
                 Client Client = new Client();
+                Client.setId(id);
                 Client.setNumpId(NumpId);
                 Client.setNom(nom);
                 Client.setPrenom(prenom);
-                Client.setAdress(Adress);
+                Client.setAddress(Address);
                 Client.setTel(tel);
                 Client.setNationalite(nationalite);
                 
@@ -104,12 +106,14 @@ public class Clients {
         loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(nom, prenom, Adress, tel, nationalite) VALUES(?, ?, ?, ?, ?);");
-            preparedStatement.setString(1, Client.getNom());
-            preparedStatement.setString(2, Client.getPrenom());
-            preparedStatement.setString(3, Client.getAdress());
-            preparedStatement.setString(4, Client.getTel());
-            preparedStatement.setString(5, Client.getNationalite());
+            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(NumpId,nom, prenom, Address, tel, nationalite) VALUES(?, ?, ?, ?, ?, ?);");
+            preparedStatement.setString(1, Client.getNumpId());
+            preparedStatement.setString(2, Client.getNom());
+            preparedStatement.setString(3, Client.getPrenom());
+            preparedStatement.setString(4, Client.getAddress());
+            preparedStatement.setString(5, Client.getTel());
+            preparedStatement.setString(6, Client.getNationalite());
+            
             
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

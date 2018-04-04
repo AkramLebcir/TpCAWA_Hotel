@@ -39,8 +39,7 @@
                                 <th>Number of beds</th>
                                 <th>Price</th>
                                 <th>Available</th>
-                                <th>Start date</th>
-                                <th>End date</th>
+                                
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -59,8 +58,6 @@
                                 <td><c:out value="${ chambre.nomLit }" /></td>
                                 <td><c:out value="${ chambre.prix }" /></td>
                                 <td><c:out value="${ chambre.dispo }" /></td>
-                                <td><c:out value="${ chambre.dureedebut }" /></td>
-                                <td><c:out value="${ chambre.dureefin }" /></td>
                             </tr>
                             </c:forEach>
                         </tbody>

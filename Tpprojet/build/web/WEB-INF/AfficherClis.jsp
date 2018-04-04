@@ -38,6 +38,7 @@
                                 <th>Country</th>
                                 <th>Address</th>
                                 <th>Phone number</th>
+                                <th>Number ident</th>
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -48,14 +49,15 @@
                             <tr>
                                 <th scope="row">
                                     <span class="badge badge-primary badge-pill">
-                                        <c:out value="${ utilisateur.numpId }" />
+                                        <c:out value="${ utilisateur.id }" />
                                     </span>
                                 </th>
                                 <td><c:out value="${ utilisateur.nom }" /></td>
                                 <td><c:out value="${ utilisateur.prenom }" /></td>
                                 <td><c:out value="${ utilisateur.nationalite }" /></td>
-                                <td><c:out value="${ utilisateur.adress }" /></td> 
+                                <td><c:out value="${ utilisateur.address }" /></td> 
                                 <td><c:out value="${ utilisateur.tel }" /></td>
+                                <td><c:out value="${ utilisateur.numId }" /></td>
                             </tr>
                             </c:forEach>
                         </tbody>

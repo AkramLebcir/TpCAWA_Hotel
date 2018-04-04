@@ -33,9 +33,10 @@ public class AffiClis extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         
+        String  NumId = request.getParameter("numId");
            String  nom = request.getParameter("nom");
                                String prenom  = request.getParameter("prenom");
-                               String adress  = request.getParameter("adress");
+                               String adress  = request.getParameter("address");
                                String tel  = request.getParameter("tel");
                                String nationalite  = request.getParameter("nationalite");
         
@@ -48,12 +49,12 @@ public class AffiClis extends HttpServlet {
             
         }else{
         
-        Client client = new Client(nom,prenom,adress,tel,nationalite,1);
+        Client client = new Client(1,nom,prenom,adress,tel,nationalite,null,NumId);
         Clients tableClient = new Clients();
-       tableClient.ajouterClient(client,request);
+        tableClient.ajouterClient(client,request);
         request.setAttribute("Clients", tableClient.recupererClients(request));
-       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
-                        rd.forward(request, response);
+        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
+        rd.forward(request, response);
        }
     }
     

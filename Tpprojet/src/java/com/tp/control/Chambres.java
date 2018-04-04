@@ -38,7 +38,7 @@ public class Chambres {
             statement = connexion.createStatement();
 
             // Exécution de la requête
-            resultat = statement.executeQuery("SELECT id, num, etage, nomLit, prix, dispo, dureedebut, dureefin FROM Chambre;");
+            resultat = statement.executeQuery("SELECT id, num, etage, nomLit, prix, dispo FROM Chambre;");
             // Récupération des données
             while (resultat.next()) {
                 int id = resultat.getInt("id");
@@ -47,8 +47,8 @@ public class Chambres {
                 String nomLit = resultat.getString("nomLit");
                 String prix = resultat.getString("prix");
                 String dispo = resultat.getString("dispo");
-                String dureedebut = resultat.getString("dureedebut");
-                String dureefin = resultat.getString("dureefin");
+//                String dureedebut = resultat.getString("dureedebut");
+//                String dureefin = resultat.getString("dureefin");
                 
                 Chambre Chambre = new Chambre();
                 Chambre.setId(id);
@@ -57,8 +57,8 @@ public class Chambres {
                 Chambre.setNomLit(nomLit);
                 Chambre.setPrix(prix);
                 Chambre.setDispo(dispo);
-                Chambre.setDureedebut(dureedebut);
-                Chambre.setDureefin(dureefin);
+//                Chambre.setDureedebut(dureedebut);
+//                Chambre.setDureefin(dureefin);
                 
                 Chambres.add(Chambre);
             }
@@ -104,14 +104,14 @@ public class Chambres {
         loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Chambre(num, etage, nomLit, prix, dispo, dureedebut, dureefin) VALUES(?, ?, ?, ?, ?, ?, ?);");
+            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Chambre(num, etage, nomLit, prix, dispo) VALUES(?, ?, ?, ?, ?);");
             preparedStatement.setString(1, Chambre.getNum());
             preparedStatement.setString(2, Chambre.getEtage());
             preparedStatement.setString(3, Chambre.getNomLit());
             preparedStatement.setString(4, Chambre.getPrix());
             preparedStatement.setString(5, Chambre.getDispo());
-            preparedStatement.setString(6,  Chambre.getDureedebut());
-            preparedStatement.setString(7,  Chambre.getDureefin());
+//            preparedStatement.setString(6, Chambre.getDureedebut());
+//            preparedStatement.setString(7, Chambre.getDureefin());
             
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

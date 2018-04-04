@@ -45,14 +45,9 @@
             }
         </style>
     </head>
-    <body>
-        
-        
-        
+    <body> 
      <!-- inclusion de navbar-->   
          <%@ include file="navbar.jsp" %>
-        
-
 
         <!-- Card -->
         <div class="card">
@@ -65,61 +60,52 @@
 
                 <!-- Material form register -->
                 <div class="md-form">
-                    <input type="text" name="num" id="num" class="form-control">
-                    <label for="form1" >Numero de la chambre</label>
-                </div>
-
-
-                   <!-- Text input-->
-
-                <div class="md-form">
-                    <input type="text" name="etage" id="etage" class="form-control">
-                    <label for="form1" >Etage</label>
+                    <input type="number" name="num" id="num" class="form-control" required>
+                    <label for="num" >Numero de la chambre</label>
                 </div>
 
                    <!-- Text input-->
                 <div class="md-form">
-                    <input type="text" name="nomLit" id="nomLit" class="form-control">
-                    <label for="form1" >Numbre  de lit</label>
+                    <input type="number" name="etage" id="etage" class="form-control" required>
+                    <label for="etage" >Etage</label>
+                </div>
+
+                   <!-- Text input-->
+                <div class="md-form">
+                    <input type="number" name="nomLit" id="nomLit" class="form-control" required>
+                    <label for="nomLit" >Numbre  de lit</label>
                 </div>
 
                    <!-- Text input-->  
                 <div class="md-form">
-                    <input type="text" name="prix" id="prix" class="form-control">
-                    <label for="form1" >Prix</label>
+                    <input type="number" name="prix" id="prix" class="form-control" required>
+                    <label for="prix" >Prix</label>
                 </div>
-
-                   <br>
-
+<!--                   <br>
                        <label class="col-md-4 control-label">Disponible </label> 
                        <br>
                      <label class="switch">
 
                      <input type="checkbox" name="dispo" id="dispo">
                      <span class="slider round"></span>
-                   </label>
-
-                <div class="md-form">
+                   </label>-->
+<!--                <div class="md-form">
                     <input type="text" id="dureedebut" name="dureedebut" class="form-control">
                     <label for="datedebut" >Date debut</label>
                 </div>
                 <div class="md-form">
                     <input type="text" id="dureefin" name="dureefin" class="form-control">
                     <label for="datefin" >Date fin</label>
-                </div>
-
+                </div>-->
                 <div class="text-center py-4 mt-3">
                     <button type="submit" class="btn btn-primary" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
                 </div>
-            </form>
-            <!-- Material form register -->
-
-        </div>
-        <!-- Card body -->
-    </form>
-</div>
-
-<!-- Card -->
+            </div>
+            <!-- Card body -->
+        </form>
+        <!-- Material form register -->
+    </div>
+    <!-- Card -->
                       
 
         <!-- Bootstrap tooltips -->
@@ -129,7 +115,7 @@
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     
-    <script>
+<!--    <script>
         $(document).ready(function(){
           var date_input=$('input[name="dureedebut"]'); //our date input has the name "date"
           var date_input2=$('input[name="dureefin"]'); //our date input has the name "date"
@@ -143,7 +129,7 @@
           date_input.datepicker(options);
           date_input2.datepicker(options);
         })
-    </script>
+    </script>-->
 
     </body>
 </html>

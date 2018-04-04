@@ -20,21 +20,21 @@ public class Chambre {
             private String nomLit;
             private String prix;
             private String dispo;
-            private String dureedebut;
-            private String dureefin;
+//            private String dureedebut;
+//            private String dureefin;
+            private int myclient;
 
     public Chambre() {
     }
 
-    public Chambre(int id, String num, String etage, String nomLit, String prix, String dispo, String dureedebut, String dureefin) {
+    public Chambre(int id, String num, String etage, String nomLit, String prix, String dispo, int myclient) {
         this.id = id;
         this.num = num;
         this.etage = etage;
         this.nomLit = nomLit;
         this.prix = prix;
         this.dispo = dispo;
-        this.dureedebut = dureedebut;
-        this.dureefin = dureefin;
+        this.myclient = myclient;
     }
 
     public int getId() {
@@ -85,21 +85,13 @@ public class Chambre {
         this.dispo = dispo;
     }
 
-    public String getDureedebut() {
-        return dureedebut;
+    public int getMyclient() {
+        return myclient;
     }
 
-    public void setDureedebut(String dureedebut) {
-        this.dureedebut = dureedebut;
+    public void setMyclient(int myclient) {
+        this.myclient = myclient;
     }
 
-    public String getDureefin() {
-        return dureefin;
-    }
-
-    public void setDureefin(String dureefin) {
-        this.dureefin = dureefin;
-    }
-
-    
+   
 }

@@ -6,80 +6,99 @@
 
 package com.tp.beans;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author alilo
  */
 public class Client {
+    private   int id;
   private   String nom;
   private   String prenom;
-  private   String Adress;
+  private   String Address;
   private   String tel;
   private   String nationalite;
-  private   int numpId;
+  private   ArrayList<Chambre> list;
+  private   String numpId;
 
     public Client() {
     }
-  
-    public Client(String nom, String prenom, String Adress, String tel, String nationalite, int numpId) {
+
+    public Client(int id, String nom, String prenom, String Address, String tel, String nationalite, ArrayList<Chambre> list, String numpId) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.Adress = Adress;
+        this.Address = Address;
         this.tel = tel;
         this.nationalite = nationalite;
+        this.list = list;
         this.numpId = numpId;
     }
- 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNom() {
         return nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public String getAdress() {
-        return Adress;
-    }
-
-   
-
-    public String getTel() {
-        return tel;
-    }
-
-    public String getNationalite() {
-        return nationalite;
-    }
-
-    public int getNumpId() {
-        return numpId;
     }
 
     public void setNom(String nom) {
         this.nom = nom;
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
-    public void setAdress(String Adress) {
-        this.Adress = Adress;
+    public String getAddress() {
+        return Address;
     }
 
-   
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    public String getTel() {
+        return tel;
+    }
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public String getNationalite() {
+        return nationalite;
     }
 
     public void setNationalite(String nationalite) {
         this.nationalite = nationalite;
     }
 
-    public void setNumpId(int numpId) {
+    public ArrayList<Chambre> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Chambre> list) {
+        this.list = list;
+    }
+
+    public String getNumpId() {
+        return numpId;
+    }
+
+    public void setNumpId(String numpId) {
         this.numpId = numpId;
     }
+
+    
 }

@@ -23,8 +23,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AffichChaLib extends HttpServlet {
 
-    
-   
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
         request.setAttribute("Chambres", tableChambre.recupererChambres(request));
@@ -39,22 +37,18 @@ public class AffichChaLib extends HttpServlet {
         String nomLit = request.getParameter("nomLit");
         String prix = request.getParameter("prix");
         String dispo = request.getParameter("dispo");
-        String dureedebut = request.getParameter("dureedebut");
-        String dureefin = request.getParameter("dureefin");
+//        String dureedebut = request.getParameter("dureedebut");
+//        String dureefin = request.getParameter("dureefin");
                         
-        if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase("")||dureedebut.equalsIgnoreCase("")||dureefin.equalsIgnoreCase(""))
+        if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase(""))
         {
             request.setAttribute("ERRCh", "remplir tout les chamep");
                          RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
-                        rd.forward(request, response);
-            
+                        rd.forward(request, response);      
         }
         else{
         
-        
-        
-        
-        Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,dureedebut,dureefin);
+        Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,-1);
         
         Chambres tableChambre = new Chambres();
        tableChambre.ajouterChambre(chambre,request);

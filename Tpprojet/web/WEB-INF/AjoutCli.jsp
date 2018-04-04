@@ -48,20 +48,20 @@
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
 
         <div class="md-form">
-            <input type="text" name="nom" id="nom" class="form-control">
+            <input type="text" name="nom" id="nom" class="form-control" required>
             <label for="form1" >Nom</label>
         </div>
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="text" name="prenom" id="prenom" class="form-control">
+            <input type="text" name="prenom" id="prenom" class="form-control" required>
             <label for="form1" >Prenom</label>
         </div>
                 <br>
 
         <label class="col-md-4 control-label">Nationalite</label><br>
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select class="mdb-select">
+        <select class="mdb-select" id="nationalite" name="nationalite">
             <option value="France" disabled selected>Choose your Nationalite</option>
 
         <option value="Afghanistan">Afghanistan </option>
@@ -320,20 +320,20 @@
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="text" name="adress" id="adress" class="form-control">
+            <input type="text" name="adress" id="adress" class="form-control" required>
             <label for="form1" >Address</label>
         </div>
 
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="text" name="Pid" id="Pid" class="form-control">
+            <input type="number" name="Pid" id="Pid" class="form-control" required>
             <label for="form1" >Piece d'identite No</label>
         </div>
 
 
         <div class="md-form">
-            <input type="text" name="tel" id="nationalite" class="form-control">
+            <input type="number" name="tel" id="tel" class="form-control">
             <label for="form1" >Contact No</label>
         </div>  
 
@@ -353,11 +353,6 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
-    
-        <script type="text/javascript">
-             $(document).ready(function() {
-    $('.mdb-select').material_select();
-  });
-        </script>
+
     </body>
 </html>
