@@ -20,12 +20,12 @@ public class Client {
   private   String tel;
   private   String nationalite;
   private   ArrayList<Chambre> list;
-  private   String numpId;
+  private   String numId;
 
     public Client() {
     }
 
-    public Client(int id, String nom, String prenom, String Address, String tel, String nationalite, ArrayList<Chambre> list, String numpId) {
+    public Client(int id, String nom, String prenom, String Address, String tel, String nationalite, ArrayList<Chambre> list, String numId) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -33,7 +33,7 @@ public class Client {
         this.tel = tel;
         this.nationalite = nationalite;
         this.list = list;
-        this.numpId = numpId;
+        this.numId = numId;
     }
 
     public int getId() {
@@ -92,12 +92,12 @@ public class Client {
         this.list = list;
     }
 
-    public String getNumpId() {
-        return numpId;
+    public String getNumId() {
+        return numId;
     }
 
-    public void setNumpId(String numpId) {
-        this.numpId = numpId;
+    public void setNumId(String numId) {
+        this.numId = numId;
     }
 
     

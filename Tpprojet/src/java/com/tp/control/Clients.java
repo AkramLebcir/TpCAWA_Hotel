@@ -40,12 +40,12 @@ public class Clients {
             statement = connexion.createStatement();
 
             // Exécution de la requête
-            resultat = statement.executeQuery("SELECT id,NumpId, nom, prenom, Address, tel, nationalite FROM Client;");
+            resultat = statement.executeQuery("SELECT id,NumId, nom, prenom, Address, tel, nationalite FROM Client;");
 
             // Récupération des données
             while (resultat.next()) {
                 int id = resultat.getInt("id");
-                String NumpId = resultat.getString("NumpId");
+                String NumId = resultat.getString("NumId");
                 String nom = resultat.getString("nom");
                 String prenom = resultat.getString("prenom");
                 String Address = resultat.getString("Address");
@@ -53,9 +53,9 @@ public class Clients {
                 String nationalite = resultat.getString("nationalite");
                 
                 
-                Client Client = new Client();
+                Client Client = new Client(id,nom,prenom,Address,tel,nationalite,null,NumId);
                 Client.setId(id);
-                Client.setNumpId(NumpId);
+                Client.setNumId(NumId);
                 Client.setNom(nom);
                 Client.setPrenom(prenom);
                 Client.setAddress(Address);
@@ -106,8 +106,8 @@ public class Clients {
         loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(NumpId,nom, prenom, Address, tel, nationalite) VALUES(?, ?, ?, ?, ?, ?);");
-            preparedStatement.setString(1, Client.getNumpId());
+            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(NumId,nom, prenom, Address, tel, nationalite) VALUES(?, ?, ?, ?, ?, ?);");
+            preparedStatement.setString(1, Client.getNumId());
             preparedStatement.setString(2, Client.getNom());
             preparedStatement.setString(3, Client.getPrenom());
             preparedStatement.setString(4, Client.getAddress());
