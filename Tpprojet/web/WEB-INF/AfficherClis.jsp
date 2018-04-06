@@ -60,8 +60,8 @@
                                 <td><c:out value="${ utilisateur.address }" /></td> 
                                 <td><c:out value="${ utilisateur.tel }" /></td>
                                 <td><c:out value="${ utilisateur.numId }" /></td>
-                                <td><button href="" type="button" class="btn btn-info btn-rounded">Update</button></td>
-                                <td><button href="" type="button" class="btn btn-danger btn-rounded">Delate</button></td>
+                                <td><a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }"><button type="button" class="btn btn-danger btn-rounded">Update</button></a></td>
+                                <td><a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }"><button type="button" class="btn btn-danger btn-rounded">Delate</button></a></td>
                             </tr>
                             </c:forEach>
                         </tbody>

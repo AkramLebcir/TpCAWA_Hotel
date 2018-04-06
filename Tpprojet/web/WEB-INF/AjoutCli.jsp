@@ -320,14 +320,14 @@
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="text" name="adress" id="adress" class="form-control" required>
+            <input type="text" name="address" id="address" class="form-control" required>
             <label for="form1" >Address</label>
         </div>
 
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="number" name="Pid" id="Pid" class="form-control" required>
+            <input type="number" name="numId" id="numId" class="form-control" required>
             <label for="form1" >Piece d'identite No</label>
         </div>
 
