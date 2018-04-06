@@ -5,10 +5,6 @@
         <servlet-class>Home</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>acuille</servlet-name>
-        <servlet-class>acuille</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AjouterCham</servlet-name>
         <servlet-class>com.tp.servlets.AjouterCham</servlet-class>
     </servlet>
@@ -39,10 +35,6 @@
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/home</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>acuille</servlet-name>
-        <url-pattern>/acuille</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AjouterCham</servlet-name>

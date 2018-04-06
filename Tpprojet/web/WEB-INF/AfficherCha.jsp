@@ -9,11 +9,11 @@
 <html>
     <head>
          <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Tpprojet/static/MDB/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -60,7 +60,7 @@
                                 <td><c:out value="${ chambre.nomLit }" /></td>
                                 <td><c:out value="${ chambre.prix }" /></td>
                                 <td><c:out value="${ chambre.dispo }" /></td>
-                                <td><a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }"><button type="button" class="btn btn-danger btn-rounded">Update</button></a></td>
+                                <td><a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }"><button type="button" class="btn btn-info btn-rounded">Update</button></a></td>
                                 <td><a href="/Tpprojet/AffichChaLib?deleteid=${ chambre.id }"><button type="button" class="btn btn-danger btn-rounded">Delate</button></a></td>
                             </tr>
                             </c:forEach>
@@ -78,12 +78,12 @@
          
          
          <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-3.2.1.min.js"></script>
         <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
         <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
     </body>
 </html>
