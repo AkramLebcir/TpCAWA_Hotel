@@ -39,6 +39,8 @@
                                 <th>Address</th>
                                 <th>Phone number</th>
                                 <th>Number ident</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -58,6 +60,8 @@
                                 <td><c:out value="${ utilisateur.address }" /></td> 
                                 <td><c:out value="${ utilisateur.tel }" /></td>
                                 <td><c:out value="${ utilisateur.numId }" /></td>
+                                <td><button href="" type="button" class="btn btn-info btn-rounded">Update</button></td>
+                                <td><button href="" type="button" class="btn btn-danger btn-rounded">Delate</button></td>
                             </tr>
                             </c:forEach>
                         </tbody>

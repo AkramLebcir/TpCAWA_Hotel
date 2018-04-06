@@ -39,6 +39,8 @@
                                 <th>Number of beds</th>
                                 <th>Price</th>
                                 <th>Available</th>
+                                <th></th>
+                                <th></th>
                                 
                             </tr>
                         </thead>
@@ -58,6 +60,8 @@
                                 <td><c:out value="${ chambre.nomLit }" /></td>
                                 <td><c:out value="${ chambre.prix }" /></td>
                                 <td><c:out value="${ chambre.dispo }" /></td>
+                                <td><a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }"><button type="button" class="btn btn-danger btn-rounded">Update</button></a></td>
+                                <td><a href="/Tpprojet/AffichChaLib?deleteid=${ chambre.id }"><button type="button" class="btn btn-danger btn-rounded">Delate</button></a></td>
                             </tr>
                             </c:forEach>
                         </tbody>

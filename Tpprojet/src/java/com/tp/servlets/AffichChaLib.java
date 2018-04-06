@@ -25,9 +25,23 @@ public class AffichChaLib extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
+        try{
+            if(!request.getParameter("deleteid").isEmpty()){
+                String id = request.getParameter("deleteid");
+                tableChambre.DeleteChambre(id, request);
+                request.removeAttribute("deleteid");
+            }
+        }catch(Exception e){}
+        try{
+            if(!request.getParameter("updateid").isEmpty()){
+                String id = request.getParameter("updateid");
+//                tableChambre.DeleteChambre(id, request);
+                request.removeAttribute("updateid");
+            }
+        }catch(Exception e){}
         request.setAttribute("Chambres", tableChambre.recupererChambres(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
-                        rd.forward(request, response);
+        rd.forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
@@ -37,24 +51,22 @@ public class AffichChaLib extends HttpServlet {
         String nomLit = request.getParameter("nomLit");
         String prix = request.getParameter("prix");
         String dispo = request.getParameter("dispo");
-//        String dureedebut = request.getParameter("dureedebut");
-//        String dureefin = request.getParameter("dureefin");
                         
         if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase(""))
         {
             request.setAttribute("ERRCh", "remplir tout les chamep");
-                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
-                        rd.forward(request, response);      
+            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
+            rd.forward(request, response);      
         }
         else{
         
-        Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,-1);
-        
-        Chambres tableChambre = new Chambres();
-       tableChambre.ajouterChambre(chambre,request);
-        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
-       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
-                        rd.forward(request, response);
+            Chambre chambre = new Chambre(1,num,etage,nomLit,prix,dispo,-1);
+
+            Chambres tableChambre = new Chambres();
+            tableChambre.ajouterChambre(chambre,request);
+            request.setAttribute("Chambres", tableChambre.recupererChambres(request));
+            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
+            rd.forward(request, response);
         }
     }
 }
