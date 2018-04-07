@@ -8,27 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap core CSS -->
-        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
-        
-        
-        
-          <!--  jQuery -->
-<script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-1.11.3.min.js"></script>
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/Tpprojet/static/css/materialize.min.css"  media="screen,projection"/>
 
-<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<!-- Bootstrap Date-Picker Plugin -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-        
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/togel.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -92,12 +79,7 @@
     </div>
     <!-- Card -->
                       
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
-    
+        <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
     </body>
 </html>

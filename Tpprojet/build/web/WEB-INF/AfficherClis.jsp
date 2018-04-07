@@ -8,12 +8,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/Tpprojet/static/MDB/css/font-awesome.min.css">
-        <!-- Bootstrap core CSS -->
-        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/Tpprojet/static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -75,13 +76,7 @@
     <!-- Content here -->
          </div>
 
-         <!-- JQuery -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-3.2.1.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
+        <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
     </body>
 </html>

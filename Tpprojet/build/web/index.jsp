@@ -8,59 +8,51 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/Tpprojet/static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page 2</title>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+        
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
     <body>
        <div class="container">
+        <div class="row valign-wrapper">
+         <div class="col s5 offset-s3 valign">
+          <div class="card center-align">
+              <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="avatar mx-auto white" class="avatar" style="width: 40%;height: 20%;border-radius: 50%;">
+           <p id="profile-name" class="profile-name-card">${ERR}</p>
            
-           <div class="card card-container">
-
-                <!--Background color-->
-                <div class="card-up teal lighten-2">
+           <form action="home" method="POST">
+               <div class="input-field col s12">
+                <input id="user" name="user" type="text" class="validate">
+                <label for="user">Username</label>
+               </div>
+               <div class="input-field col s12">
+                <input id="pass" name="pass" type="password" class="validate">
+                <label for="user">Password</label>
+               </div>
+                <div id="remember" class="checkbox">
+                  <label>
+                     <input type="checkbox" value="remember-me"> Remember me
+                  </label>
                 </div>
-
-                <!--Avatar-->
-                <div class="avatar mx-auto white"><img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="avatar mx-auto white" class="rounded-circle img-fluid">
-                </div>
-                <p id="profile-name" class="profile-name-card">${ERR}</p>
-                <div class="card-body">
-                    <form class="form-signin" action="home" method="POST">
-                        <span id="reauth-email" class="reauth-email"></span>
-                        <div class="md-form">
-                            <input type="text" name="user" id="user" class="form-control">
-                            <label for="user" >Username</label>
-                        </div>
-                        <div class="md-form">
-                            <input type="password" name="pass" id="pass" class="form-control">
-                            <label for="pass" >Password</label>
-                        </div>
-                        <div id="remember" class="checkbox">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-                    </form><!-- /form -->
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Sign in
+                    <i class="material-icons right">send</i>
+                  </button>
+            </form><!-- /form -->
                 </div>
            </div>
         </div>
-             
-                <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+           </div>
+          <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
     </body>
 </html>
