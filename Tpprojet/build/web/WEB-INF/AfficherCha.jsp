@@ -18,6 +18,8 @@
     </head>
     <body>
         <%@ include file="navbar.jsp" %>
+        <br><div><br><br></div><br>
+        
          <div class="container">
             
             <div class="card">
