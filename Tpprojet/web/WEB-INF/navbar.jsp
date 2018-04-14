@@ -32,6 +32,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Tpprojet/AffichChaLib">View rooms</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Tpprojet/ReserviCham">Reservation</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 

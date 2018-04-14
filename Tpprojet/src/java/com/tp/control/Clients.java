@@ -120,4 +120,92 @@ public class Clients {
             e.printStackTrace();
         }
     }
+    public void DeleteClient(String id,HttpServletRequest request) {
+        loadDatabase(request);
+        
+        try {
+            PreparedStatement preparedStatement = connexion.prepareStatement("DELETE FROM Client WHERE id=?;");
+            preparedStatement.setString(1, id);
+            
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
+   // recuperer un client  
+    public Client recupererClient(String Id,HttpServletRequest request) {
+       Client client = null;
+        Statement statement = null;
+        ResultSet resultat = null;
+
+        loadDatabase(request);
+        
+        try {
+            statement = connexion.createStatement();
+
+            // Exécution de la requête
+            resultat = statement.executeQuery("SELECT id,NumId, nom, prenom, Address, tel, nationalite FROM Client WHERE id= "+Id+";");
+
+            // Récupération des données
+           resultat.next();
+                int id = resultat.getInt("id");
+                String NumId = resultat.getString("NumId");
+                String nom = resultat.getString("nom");
+                String prenom = resultat.getString("prenom");
+                String Address = resultat.getString("Address");
+                String tel = resultat.getString("tel");
+                String nationalite = resultat.getString("nationalite");
+                
+                
+                client = new Client(id,nom,prenom,Address,tel,nationalite,null,NumId);
+                client.setId(id);
+                client.setNumId(NumId);
+                client.setNom(nom);
+                client.setPrenom(prenom);
+                client.setAddress(Address);
+                client.setTel(tel);
+                client.setNationalite(nationalite);
+                
+                
+            
+        } catch (SQLException e) {
+        } finally {
+            // Fermeture de la connexion
+            try {
+                if (resultat != null)
+                    resultat.close();
+                if (statement != null)
+                    statement.close();
+                if (connexion != null)
+                    connexion.close();
+            } catch (SQLException ignore) {
+            }
+        }
+        
+        return client;
+    }
+    
+    public void apdateClient(String id,Client Client,HttpServletRequest request) {
+        loadDatabase(request);
+        
+        try {
+            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE client SET NumId = ?, nom = ?, prenom = ?, Address = ?, tel = ?, nationalite =?  WHERE  id = ? ;");
+            preparedStatement.setString(1, Client.getNumId());
+            preparedStatement.setString(2, Client.getNom());
+            preparedStatement.setString(3, Client.getPrenom());
+            preparedStatement.setString(4, Client.getAddress());
+            preparedStatement.setString(5, Client.getTel());
+            preparedStatement.setString(6, Client.getNationalite());
+            preparedStatement.setInt(7, Client.getId());
+            
+            
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
 }

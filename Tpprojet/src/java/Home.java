@@ -34,7 +34,7 @@ public class Home extends HttpServlet {
                     if(user.equalsIgnoreCase("alilo")||user.equalsIgnoreCase("akram")){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
-                        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");
+                        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/home.jsp");
                         rd.forward(request, response);
                     } 
                     else{
@@ -74,7 +74,7 @@ public class Home extends HttpServlet {
                     if((user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram") && pass.equalsIgnoreCase("root"))){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
-                        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/accuill.jsp");
+                        RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/home.jsp");
                         rd.forward(request, response);
                     } 
                     else{

@@ -12,14 +12,14 @@
          <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
         
         
         
           <!--  jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-1.11.3.min.js"></script>
 
 <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
@@ -81,22 +81,7 @@
                     <input type="number" name="prix" id="prix" class="form-control" required>
                     <label for="prix" >Prix</label>
                 </div>
-<!--                   <br>
-                       <label class="col-md-4 control-label">Disponible </label> 
-                       <br>
-                     <label class="switch">
 
-                     <input type="checkbox" name="dispo" id="dispo">
-                     <span class="slider round"></span>
-                   </label>-->
-<!--                <div class="md-form">
-                    <input type="text" id="dureedebut" name="dureedebut" class="form-control">
-                    <label for="datedebut" >Date debut</label>
-                </div>
-                <div class="md-form">
-                    <input type="text" id="dureefin" name="dureefin" class="form-control">
-                    <label for="datefin" >Date fin</label>
-                </div>-->
                 <div class="text-center py-4 mt-3">
                     <button type="submit" class="btn btn-primary" >Enregistrer<span class="glyphicon glyphicon-send"></span></button>
                 </div>
@@ -107,29 +92,12 @@
     </div>
     <!-- Card -->
                       
-
         <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
         <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
     
-<!--    <script>
-        $(document).ready(function(){
-          var date_input=$('input[name="dureedebut"]'); //our date input has the name "date"
-          var date_input2=$('input[name="dureefin"]'); //our date input has the name "date"
-          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-          var options={
-            format: 'mm/dd/yyyy',
-            container: container,
-            todayHighlight: true,
-            autoclose: true,
-          };
-          date_input.datepicker(options);
-          date_input2.datepicker(options);
-        })
-    </script>-->
-
     </body>
 </html>

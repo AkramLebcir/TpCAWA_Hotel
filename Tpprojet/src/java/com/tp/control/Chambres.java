@@ -118,4 +118,17 @@ public class Chambres {
             e.printStackTrace();
         }
     }
+    
+    public void DeleteChambre(String id,HttpServletRequest request) {
+        loadDatabase(request);
+        
+        try {
+            PreparedStatement preparedStatement = connexion.prepareStatement("DELETE FROM Chambre WHERE id=?;");
+            preparedStatement.setString(1, id);
+            
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

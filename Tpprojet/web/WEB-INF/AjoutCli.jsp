@@ -10,11 +10,11 @@
     <head>
         
       <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Tpprojet/static/MDB/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
         
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -320,14 +320,14 @@
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="text" name="adress" id="adress" class="form-control" required>
+            <input type="text" name="address" id="address" class="form-control" required>
             <label for="form1" >Address</label>
         </div>
 
 
         <!-- Text input-->
         <div class="md-form">
-            <input type="number" name="Pid" id="Pid" class="form-control" required>
+            <input type="number" name="numId" id="numId" class="form-control" required>
             <label for="form1" >Piece d'identite No</label>
         </div>
 
@@ -346,13 +346,13 @@
 
 
 <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-3.2.1.min.js"></script>
         <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
         <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
 
     </body>
 </html>
