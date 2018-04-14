@@ -41,10 +41,13 @@
 .card {
     /* just in case there no content*/
     margin: 0 auto 25px;
-    margin-top: 80px;
+    
     padding: 10px;
 }
-
+nav{
+    position: fixed;
+    z-index: 5;
+}
            
 /*
  * Form styles

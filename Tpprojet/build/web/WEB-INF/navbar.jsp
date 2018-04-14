@@ -10,6 +10,7 @@
 <!--Main Navigation-->
 <header>
 
+<<<<<<< HEAD
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
         <a class="navbar-brand" href="home"><strong>${ sessionScope.user }</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,17 +67,20 @@
     <div class="navbar-collapse collapse">
         <div class="navbar-header">
       <a class="navbar-brand" href="home">${ sessionScope.user }</a>
+=======
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><strong>${ sessionScope.user }</strong></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="home">Home</a></li>
+        <li><a href="/Tpprojet/AjouterCli">Add client</a></li>
+        <li><a href="/Tpprojet/AjouterCham">Add room</a></li>
+        <li><a href="/Tpprojet/AffiClis">View clients</a></li>
+        <li><a href="/Tpprojet/AffichChaLib">View rooms</a></li>
+        <li><a href="/Tpprojet/ReserviCham">Reservation</a></li>
+        <li><a href="/Tpprojet/Sinup">Sign up</a></li>
+      </ul>
+>>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
     </div>
-    <ul class="nav navbar-nav navbar-left">
-       <li><a name="nav" href="/Tpprojet/AjouterCham">Ajouter chambre</a></li>
-        <li><a name="nav" href="/Tpprojet/AjouterCli">Ajouter Client</a></li>
-        <li><a name="nav" href="/Tpprojet/AffiClis">Afficher Clients</a></li>
-        <li><a name="nav" href="/Tpprojet/AffichChaLib">Afficher Chambres</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#about">Right</a></li>
-      <li><a href="#contact">sinup</a></li>
-    </ul>
-  </div>
-    
-</nav>
+  </nav>
+</header>

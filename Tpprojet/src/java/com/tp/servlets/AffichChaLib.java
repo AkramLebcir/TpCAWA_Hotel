@@ -35,7 +35,11 @@ public class AffichChaLib extends HttpServlet {
         try{
             if(!request.getParameter("updateid").isEmpty()){
                 String id = request.getParameter("updateid");
+<<<<<<< HEAD
 //               tableChambre.DeleteChambre(id, request);
+=======
+//                tableChambre.DeleteChambre(id, request);
+>>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
                 request.removeAttribute("updateid");
             }
         }catch(Exception e){}

@@ -8,12 +8,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
          <!-- Font Awesome -->
         <link rel="stylesheet" href="/Tpprojet/static/MDB/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
         <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
         <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
+=======
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/Tpprojet/static/css/materialize.min.css"  media="screen,projection"/>
+>>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,6 +27,8 @@
     </head>
     <body>
         <%@ include file="navbar.jsp" %>
+        <br><div><br><br></div><br>
+        
          <div class="container">
             
             <div class="card">
@@ -77,6 +85,7 @@
          
          
          
+<<<<<<< HEAD
          <!-- JQuery -->
         <script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-3.2.1.min.js"></script>
         <!-- Bootstrap tooltips -->
@@ -85,5 +94,9 @@
         <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
+=======
+         <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
+>>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
     </body>
 </html>
