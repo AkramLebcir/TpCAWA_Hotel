@@ -26,8 +26,9 @@
             
             <div class="card">
                 <div class="card-body">
-                    <h3>Lists Des Chambres !</h3>
-
+                    <h3>Lists Des Chambres !</h3><br><br><a href="/Tpprojet/AffichChaLib?chamLibid=1"><button type="button" class="btn btn-info btn-rounded">Room_libre</button></a>
+<br><br> <a href="/Tpprojet/AffichChaLib?chamLibid=0"><button type="button" class="btn btn-info btn-rounded">Room</button></a>
+<p>----------- pour le test</p>
                     <!--Table-->
                     <table class="table table-hover table-responsive-md table-fixed">
 
