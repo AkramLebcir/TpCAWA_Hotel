@@ -45,7 +45,7 @@
         <div class="card-content">
 
         <!-- Form Name -->
-        <legend><center><h2>Add Client</h2></center></legend>
+        <legend><center><h2>Add consomer</h2></center></legend>
 
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>

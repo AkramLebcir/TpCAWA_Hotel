@@ -54,7 +54,7 @@ public class AffichChaLib extends HttpServlet {
         
         
         
-        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
+        request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
         rd.forward(request, response);
     }
@@ -85,6 +85,7 @@ public class AffichChaLib extends HttpServlet {
             tableChambre.updateCahmbre(chambre,request);
             }
             ajo_mod=true;
+           // request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
             RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
             rd.forward(request, response);
