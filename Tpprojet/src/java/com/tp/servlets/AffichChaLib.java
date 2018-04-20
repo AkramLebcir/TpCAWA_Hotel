@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AffichChaLib extends HttpServlet {
  int Idv=0;
+ boolean ajo_mod=true;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
         try{
@@ -37,6 +38,7 @@ public class AffichChaLib extends HttpServlet {
                 String id = request.getParameter("updateid");
                 Chambre chambre= tableChambre.getCham(id, request);
                 Idv= chambre.getId();
+                ajo_mod=false;
                 request.setAttribute("chambre", chambre);
                 request.setAttribute("varcham", "Update");
                  RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
@@ -47,25 +49,6 @@ public class AffichChaLib extends HttpServlet {
             
            
         }catch(Exception e){}
-         try{
-            if(!request.getParameter("upIdForm").isEmpty()){
-                String id = request.getParameter("updateid");
-                Chambre chambre= tableChambre.getCham(id, request);
-                request.setAttribute("chambre", chambre);
-                request.setAttribute("varcham", "Update");
-                 RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
-                        rd.forward(request, response);
-                        request.removeAttribute("updateid");
-            }
-            
-            
-           
-        }catch(Exception e){}
-        
-        
-        
-        
-        
         
         
         
@@ -96,7 +79,12 @@ public class AffichChaLib extends HttpServlet {
             Chambre chambre = new Chambre(Idv,num,etage,nomLit,prix,"1",-1);
             Idv=0;
             Chambres tableChambre = new Chambres();
+            if(ajo_mod){
+            tableChambre.ajouterChambre(chambre, request);
+            }else{
             tableChambre.updateCahmbre(chambre,request);
+            }
+            ajo_mod=true;
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
             RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
             rd.forward(request, response);
