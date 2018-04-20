@@ -100,7 +100,7 @@ public class Chambres {
         }
     }
     
-    public void ajouterChambre(Chambre Chambre,HttpServletRequest request) {
+      public void ajouterChambre(Chambre Chambre,HttpServletRequest request) {
         loadDatabase(request);
         
         try {
@@ -118,6 +118,7 @@ public class Chambres {
             e.printStackTrace();
         }
     }
+
     
     public void DeleteChambre(String id,HttpServletRequest request) {
         loadDatabase(request);
@@ -130,5 +131,85 @@ public class Chambres {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    
+    
+   
+    
+    
+    
+   
+    
+     public void updateCahmbre(Chambre Chambre,HttpServletRequest request) {
+        loadDatabase(request);
+        
+        try {
+            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE chambre SET num  = ?,  etage = ?,  nomLit = ?,prix  = ? WHERE  id  = ?;");
+       
+            
+            preparedStatement.setString(1, Chambre.getNum());
+            preparedStatement.setString(2,  Chambre.getEtage());
+            preparedStatement.setString(3, Chambre.getNomLit() );
+            preparedStatement.setString(4,Chambre.getPrix()); 
+            preparedStatement.setString(5,  Chambre.getDispo());
+            preparedStatement.setInt(5, Chambre.getId());
+            
+            
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+     
+       public Chambre getCham(String Id,HttpServletRequest request ) {
+        Chambre Chambre = new Chambre();
+        Statement statement = null;
+        ResultSet resultat = null;
+
+        loadDatabase(request);
+        
+        try {
+            statement = connexion.createStatement();
+
+            // Exécution de la requête
+            resultat = statement.executeQuery("SELECT id, num, etage, nomLit, prix, dispo FROM Chambre where id="+Id+";");
+            // Récupération des données
+           resultat.next();
+                int id = resultat.getInt("id");
+                String num = resultat.getString("num");
+                String etage = resultat.getString("etage");
+                String nomLit = resultat.getString("nomLit");
+                String prix = resultat.getString("prix");
+                String dispo = resultat.getString("dispo");
+//                String dureedebut = resultat.getString("dureedebut");
+//                String dureefin = resultat.getString("dureefin");
+                
+               
+                Chambre.setId(id);
+                Chambre.setNum(num);
+                Chambre.setEtage(etage);
+                Chambre.setNomLit(nomLit);
+                Chambre.setPrix(prix);
+                Chambre.setDispo(dispo);
+//                Chambre.setDureedebut(dureedebut);
+//                Chambre.setDureefin(dureefin);
+                
+             
+            
+        } catch (SQLException e) {
+        } finally {
+            // Fermeture de la connexion
+            try {
+                if (resultat != null)
+                    resultat.close();
+                if (statement != null)
+                    statement.close();
+                if (connexion != null)
+                    connexion.close();
+            } catch (SQLException ignore) {
+            }
+        }
+        
+        return Chambre;
     }
 }
