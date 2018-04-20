@@ -45,8 +45,8 @@
             <!-- Card body -->
             <div class="card-content">
                 <legend><center><h2>${varcham} une chambre</h2></center></legend>
-                <p id="profile-name" class="profile-name-card" name="id">${chambre.getId()}</p>
-
+                <p id="profile-name" class="profile-name-card" d>${chambre.getId()}</p>
+              
                 <!-- Material form register -->
                 <div class="input-field col s12">
                     <input id="num" name="num" type="number" class="validate" value="<c:out value="${chambre.getNum()}"/>" required>

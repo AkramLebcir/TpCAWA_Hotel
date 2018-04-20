@@ -49,7 +49,7 @@
 
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
-
+       
         <div class="input-field col s12">
                 <input id="Nom" name="nom" type="text" class="validate" required>
                 <label for="Nom">Nom</label>

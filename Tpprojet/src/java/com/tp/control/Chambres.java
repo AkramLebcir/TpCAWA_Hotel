@@ -6,6 +6,7 @@
 package com.tp.control;
 
 import com.tp.beans.Chambre;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -140,25 +141,43 @@ public class Chambres {
     
    
     
-     public void updateCahmbre(Chambre Chambre,HttpServletRequest request) {
-        loadDatabase(request);
+     public void updateCahmbre(Chambre chambre,HttpServletRequest request) {
+        
+          loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE chambre SET num  = ?,  etage = ?,  nomLit = ?,prix  = ? WHERE  id  = ?;");
-       
-            
-            preparedStatement.setString(1, Chambre.getNum());
-            preparedStatement.setString(2,  Chambre.getEtage());
-            preparedStatement.setString(3, Chambre.getNomLit() );
-            preparedStatement.setString(4,Chambre.getPrix()); 
-            preparedStatement.setString(5,  Chambre.getDispo());
-            preparedStatement.setInt(5, Chambre.getId());
-            
+            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE  Chambre SET num = ?, etage = ?, nomLit = ?, prix = ? WHERE id = ? ;");
+            preparedStatement.setString(1, chambre.getNum());
+            preparedStatement.setString(2, chambre.getEtage());
+            preparedStatement.setString(3, chambre.getNomLit());
+            preparedStatement.setString(4, chambre.getPrix());
+         //   preparedStatement.setString(5, chambre.getId());
+          preparedStatement.setInt(5, chambre.getId());
+//            preparedStatement.setString(6, Chambre.getDureedebut());
+//            preparedStatement.setString(7, Chambre.getDureefin());
             
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
     }
      
        public Chambre getCham(String Id,HttpServletRequest request ) {

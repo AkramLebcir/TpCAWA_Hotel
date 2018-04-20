@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author alilo
  */
 public class AffichChaLib extends HttpServlet {
-
+ int Idv=0;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
         try{
@@ -34,6 +34,21 @@ public class AffichChaLib extends HttpServlet {
         }catch(Exception e){}
         try{
             if(!request.getParameter("updateid").isEmpty()){
+                String id = request.getParameter("updateid");
+                Chambre chambre= tableChambre.getCham(id, request);
+                Idv= chambre.getId();
+                request.setAttribute("chambre", chambre);
+                request.setAttribute("varcham", "Update");
+                 RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
+                        rd.forward(request, response);
+                        request.removeAttribute("updateid");
+            }
+            
+            
+           
+        }catch(Exception e){}
+         try{
+            if(!request.getParameter("upIdForm").isEmpty()){
                 String id = request.getParameter("updateid");
                 Chambre chambre= tableChambre.getCham(id, request);
                 request.setAttribute("chambre", chambre);
@@ -56,18 +71,18 @@ public class AffichChaLib extends HttpServlet {
         
         
         
-        
         request.setAttribute("Chambres", tableChambre.recupererChambres(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
         rd.forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-
+        String id =request.getParameter("id");
         String num = request.getParameter("num");
         String etage = request.getParameter("etage");
         String nomLit = request.getParameter("nomLit");
         String prix = request.getParameter("prix");
+     
         //String dispo = request.getParameter("dispo");
                         
        /* if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase(""))
@@ -78,7 +93,8 @@ public class AffichChaLib extends HttpServlet {
         }
         else{*/
         
-            Chambre chambre = new Chambre(Integer.parseInt("1"),num,etage,nomLit,prix,"1",-1);
+            Chambre chambre = new Chambre(Idv,num,etage,nomLit,prix,"1",-1);
+            Idv=0;
             Chambres tableChambre = new Chambres();
             tableChambre.updateCahmbre(chambre,request);
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
