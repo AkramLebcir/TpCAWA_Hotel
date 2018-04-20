@@ -54,12 +54,15 @@ public class Update extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String  NumId = request.getParameter("numId");
+         String  NumId = request.getParameter("numId");
         String  nom = request.getParameter("nom");
         String prenom  = request.getParameter("prenom");
         String adress  = request.getParameter("address");
         String tel  = request.getParameter("tel");
         String nationalite  = request.getParameter("nationalite");
+        
+        
+        
         Client client = new Client(Integer.parseInt("1"),nom,prenom,adress,tel,nationalite,null,NumId);
         Clients tableClient = new Clients();
         tableClient.apdateClient(request.getParameter("id"),client,request);

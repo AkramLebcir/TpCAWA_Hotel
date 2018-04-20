@@ -35,7 +35,7 @@ public class AffiClis extends HttpServlet {
         }catch(Exception e){}
         try{
             if(!request.getParameter("updateid").isEmpty()){
-<<<<<<< HEAD
+
                 Client c=   tableClient.recupererClient(request.getParameter("updateid"), request);
                  request.setAttribute("client", c);
                 String id = request.getParameter("updateid");
@@ -43,11 +43,11 @@ public class AffiClis extends HttpServlet {
                         rd.forward(request, response);
                         request.removeAttribute("updateid");
              
-=======
-                String id = request.getParameter("updateid");
+
+              
 //                tableClient.DeleteClient(id, request);
-                request.removeAttribute("updateid");
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
+               
+
             }
         }catch(Exception e){}
         request.setAttribute("Clients", tableClient.recupererClients(request));
@@ -63,13 +63,7 @@ public class AffiClis extends HttpServlet {
         String adress  = request.getParameter("address");
         String tel  = request.getParameter("tel");
         String nationalite  = request.getParameter("nationalite");
-<<<<<<< HEAD
-        
-        
-=======
-        
-        
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
+
 //       if(nom.equalsIgnoreCase("")||prenom.equalsIgnoreCase("")||adress.equalsIgnoreCase("")||tel.equalsIgnoreCase(""))
 //        {
 //            request.setAttribute("ERRCh", "remplir tout les chamep");

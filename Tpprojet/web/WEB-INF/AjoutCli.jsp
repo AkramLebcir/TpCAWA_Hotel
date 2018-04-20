@@ -9,14 +9,7 @@
 <html>
     <head>
         
-<<<<<<< HEAD
-      <!-- Font Awesome -->
-        <link rel="stylesheet" href="/Tpprojet/static/MDB/css/font-awesome.min.css">
-        <!-- Bootstrap core CSS -->
-        <link href="/Tpprojet/static/MDB/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="/Tpprojet/static/MDB/css/mdb.min.css" rel="stylesheet">
-=======
+
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -24,8 +17,7 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
-        
+
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -327,15 +319,9 @@
             <option value="Zimbabwe">Zimbabwe </option>
         
             </select>
-<<<<<<< HEAD
 
-        <!-- Text input-->
-        <div class="md-form">
-            <input type="text" name="address" id="address" class="form-control" required>
-            <label for="form1" >Address</label>
-=======
             
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
+
         </div>
         <!-- Text input-->
         <div class="input-field col s12">
@@ -345,18 +331,12 @@
 
 
         <!-- Text input-->
-<<<<<<< HEAD
-        <div class="md-form">
-            <input type="number" name="numId" id="numId" class="form-control" required>
-            <label for="form1" >Piece d'identite No</label>
-        </div>
 
-=======
         <div class="input-field col s12">
                 <input id="numId" name="numId" type="text" class="validate" required>
                 <label for="numId">Piece d'identite No</label>
                </div>
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
+
 
         <div class="input-field col s12">
                 <input id="tel" name="tel" type="text" class="validate" required>
@@ -376,18 +356,11 @@
            var elem = document.querySelector('select');
             var instance = M.FormSelect.init(elem, options);
 
-<<<<<<< HEAD
+
 <!-- JQuery -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/jquery-3.2.1.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="/Tpprojet/static/MDB/js/mdb.min.js"></script>
-=======
+
   // Or with jQuery
->>>>>>> 01e473f36d8a95632ec0ca7b1bcbd141e5c2b384
+
 
             $(document).ready(function(){
               $('select').formSelect();
