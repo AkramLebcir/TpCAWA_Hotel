@@ -11,7 +11,7 @@
 <header>
 
     <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper brown darken-3">
       <a href="#" class="brand-logo"><strong>${ sessionScope.user }</strong></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="home">Home</a></li>

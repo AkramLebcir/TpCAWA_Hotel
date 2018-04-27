@@ -71,7 +71,11 @@
 
                     </table>
                     <!--Table-->
-
+  <!--button ajouter-->
+                 <div class="row">
+             <div class="col s2 offset-s10"><a href="/Tpprojet/AjouterCham" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a></div>
+               </div>
+            </div>
                 </div>
             </div>         
             <!-- Content here -->

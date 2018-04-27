@@ -203,6 +203,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 body{
-/*    background-image: url("http://hdqwalls.com/wallpapers/material-design-blue-and-white-to.jpg");*/
-    background-color: #F5F5F5;
+  //  background-image: url("http://hdqwalls.com/wallpapers/material-design-blue-and-white-to.jpg");
+  // background-color: #1c2a48 !important;
 }

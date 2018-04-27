@@ -69,18 +69,23 @@
                                 <td><a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }"><button type="button" class="btn btn-danger btn-rounded">Delate</button></a></td>
                             </tr>
                             </c:forEach>
+                            
                         </tbody>
                         <!--Table body-->
 
                     </table>
                     <!--Table-->
-
-                </div>
             </div>
+                <!--button ajouter-->
+                 <div class="row">
+             <div class="col s1 offset-s11"><a href="/Tpprojet/AjouterCli" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a></div>
+               </div>
+            </div>
+            
+   
     <!-- Content here -->
          </div>
-
-
+         
         <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
 
