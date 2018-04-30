@@ -65,7 +65,7 @@
 
        <div class="input-field col s12">
         <select id="nationalite" name="nationalite" class="browser-default">
-            <option value="France" disabled selected>Choose your Nationalite</option>
+            <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Nationalite</option>
 
             <option value="Afghanistan">Afghanistan </option>
             <option value="Afrique_Centrale">Afrique_Centrale </option>

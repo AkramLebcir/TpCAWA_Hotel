@@ -45,25 +45,28 @@
         <div class="card-content">
 
         <!-- Form Name -->
-        <legend><center><h2>Add consomer</h2></center></legend>
+        <legend><center><h2>${varcham} consomer</h2></center></legend>
 
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
        
-        <div class="input-field col s12">
-                <input id="Nom" name="nom" type="text" class="validate" required>
-                <label for="Nom">Nom</label>
-               </div>
-       
-        <!-- Text input-->
-        <div class="input-field col s12">
-                <input id="prenom" name="prenom" type="text" class="validate" required>
-                <label for="Prenom">Prenom</label>
-        </div>
+       <p id="profile-name" class="profile-name-card" name="id"><c:out value="${client.id}"/></p>
 
         <div class="input-field col s12">
+            <input id="nom"  name="nom"  type="text" class="validate" value="<c:out value="${client.nom}"/>" required>
+            <label for="nom" >Nom</label>
+        </div>
+
+        <!-- Text input-->
+        <div class="input-field col s12">
+            <input type="text" name="prenom" id="prenom" class="validate" value="<c:out value="${client.prenom}"/>" required>
+            <label for="form1" >Prenom</label>
+        </div>
+                <br>
+
+       <div class="input-field col s12">
         <select id="nationalite" name="nationalite" class="browser-default">
-            <option value="France" disabled selected>Choose your Nationalite</option>
+            <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Nationalite</option>
 
             <option value="Afghanistan">Afghanistan </option>
             <option value="Afrique_Centrale">Afrique_Centrale </option>
@@ -325,23 +328,22 @@
         </div>
         <!-- Text input-->
         <div class="input-field col s12">
-                <input id="address" name="address" type="text" class="validate" required>
-                <label for="address">Address</label>
-               </div>
+            <input type="text" name="address" id="address" class="form-control" value="<c:out value="${client.getAddress()}"/>" required>
+            <label for="form1" >Address</label>
+        </div>
 
 
         <!-- Text input-->
+        <div class="input-field col s12">
+            <input type="text" name="numId" id="numId" class="form-control" value="<c:out value="${client.getNumId()}"/>" required>
+            <label for="form1" >Piece d'identite No</label>
+        </div>
+
 
         <div class="input-field col s12">
-                <input id="numId" name="numId" type="text" class="validate" required>
-                <label for="numId">Piece d'identite No</label>
-               </div>
-
-
-        <div class="input-field col s12">
-                <input id="tel" name="tel" type="text" class="validate" required>
-                <label for="numId">Contact No</label>
-               </div>
+            <input type="number" name="tel" id="tel" class="form-control" value="<c:out value="${client.getTel()}"/>" required>
+            <label for="form1" >Contact No</label>
+        </div>  
 
         <div class="text-center mt-4">
                 <button class="btn btn-primary" type="submit">Save</button>
@@ -349,6 +351,8 @@
         </div>
     </form>
 </div>
+
+
 
 <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
