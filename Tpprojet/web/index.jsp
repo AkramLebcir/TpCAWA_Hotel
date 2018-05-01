@@ -23,6 +23,7 @@
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
     <body>
+        <br><br><br>
        <div class="container">
         <div class="row valign-wrapper">
          <div class="col s5 offset-s3 valign">
@@ -32,10 +33,12 @@
            
            <form action="home" method="POST">
                <div class="input-field col s12">
+                   <i class="material-icons prefix">person</i>
                 <input id="user" name="user" type="text" class="validate">
                 <label for="user">Username</label>
                </div>
                <div class="input-field col s12">
+                   <i class="material-icons prefix">lock_open</i>
                 <input id="pass" name="pass" type="password" class="validate">
                 <label for="user">Password</label>
                </div>
