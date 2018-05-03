@@ -42,7 +42,7 @@
       <div class="card">
 
     <form class="well form-horizontal" action="AffiClis" method="post"  id="contact_form">
-        <div class="card-content">
+        <div class="card-content ">
 
         <!-- Form Name -->
         <legend><center><h2>${varcham} consomer</h2></center></legend>
@@ -53,18 +53,21 @@
        <p id="profile-name" class="profile-name-card" name="id"><c:out value="${client.id}"/></p>
 
         <div class="input-field col s12">
+            <i class="material-icons prefix">person</i>
             <input id="nom"  name="nom"  type="text" class="validate" value="<c:out value="${client.nom}"/>" required>
             <label for="nom" >Nom</label>
         </div>
 
         <!-- Text input-->
         <div class="input-field col s12">
+            <i class="material-icons prefix">person_outline</i>
             <input type="text" name="prenom" id="prenom" class="validate" value="<c:out value="${client.prenom}"/>" required>
             <label for="form1" >Prenom</label>
         </div>
                 <br>
 
        <div class="input-field col s12">
+           <i class="material-icons prefix"></i>
         <select id="nationalite" name="nationalite" class="browser-default">
             <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Nationalite</option>
 
@@ -327,26 +330,29 @@
 
         </div>
         <!-- Text input-->
-        <div class="input-field col s12">
+        <div class="input-field col  s12">
+            <i class="material-icons prefix">add_location</i>
             <input type="text" name="address" id="address" class="form-control" value="<c:out value="${client.getAddress()}"/>" required>
-            <label for="form1" >Address</label>
+           <label for="form1" >Address</label>
         </div>
 
 
         <!-- Text input-->
         <div class="input-field col s12">
+            <i class="material-icons prefix">person_pin</i>
             <input type="text" name="numId" id="numId" class="form-control" value="<c:out value="${client.getNumId()}"/>" required>
             <label for="form1" >Piece d'identite No</label>
         </div>
 
 
         <div class="input-field col s12">
+            <i class="material-icons prefix">smartphone</i>
             <input type="number" name="tel" id="tel" class="form-control" value="<c:out value="${client.getTel()}"/>" required>
             <label for="form1" >Contact No</label>
         </div>  
 
         <div class="text-center mt-4">
-                <button class="btn btn-primary" type="submit">Save</button>
+            <center><button class="btn large btn-primary" type="submit">Save</button></center>
         </div>
         </div>
     </form>

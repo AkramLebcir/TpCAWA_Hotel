@@ -63,7 +63,7 @@ public class Update extends HttpServlet {
         
         
         
-        Client client = new Client(Integer.parseInt("1"),nom,prenom,adress,tel,nationalite,null,NumId);
+        Client client = new Client(0,nom,prenom,adress,tel,nationalite,null,NumId);
         Clients tableClient = new Clients();
         tableClient.apdateClient(request.getParameter("id"),client,request);
         request.setAttribute("Clients", tableClient.recupererClients(request));

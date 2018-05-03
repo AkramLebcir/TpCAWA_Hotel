@@ -22,7 +22,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body class="brown lighten-3">
+    <body >
          <%@ include file="navbar.jsp" %>
          <br><div><br><br></div><br>
          
@@ -30,7 +30,7 @@
           
             <div class="card col s11">
                 <div class="card-body">
-                    <h3>              Lists Des Clients </h3>
+                    <center> <h3 class="indigo-text text-darken-4">    Lists Des Clients </h3></center></br></br></br>
                     <!--Table-->
                     <table class="table table-hover table-responsive-md table-fixed">
 
@@ -38,15 +38,15 @@
                         <thead>
                             <tr>
                                 <th>  </th>
-                                <th>Name</th>
-                                <th>Surname</th>
-                                <th>Country</th>
-                                <th>Address</th>
-                                <th>Phone number</th>
-                                <th>ident Number</th>
+                                <th  class="indigo-text text-darken-4">Name</th>
+                                <th class="indigo-text text-darken-4">Surname</th>
+                                <th class="indigo-text text-darken-4">Country</th>
+                                <th class="indigo-text text-darken-4">Address</th>
+                                <th class="indigo-text text-darken-4">Phone number</th>
+                                <th class="indigo-text text-darken-4">ident Number</th>
                                 
-                                <th>Edit</th>
-                                <th>Delet</th>
+                                <th class="indigo-text text-darken-4">Edit</th>
+                                <th class="indigo-text text-darken-4">Delet</th>
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -56,7 +56,7 @@
                             <c:forEach var="utilisateur" items="${Clients}">
                             <tr>
                                 <th scope="row">
-                                    <span class="badge badge-primary badge-pill brown-text text-darken-4">
+                                    <span class="badge badge-primary badge-pill indigo-text text-darken-4">
                                         <c:out value="${ utilisateur.id }" />
                                     </span>
                                 </th>
@@ -67,9 +67,9 @@
                                 <td><c:out value="${ utilisateur.tel }" /></td>
                                 <td><c:out value="${ utilisateur.numId }" /></td>
                                 
-                               <td> <a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }" class="btn-floating btn-large  cyan  brown lighten-1"><i class="material-icons">edit</i></a></td>
-                             <td> <a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }" class="btn-floating btn-large waves-effect waves-light brown darken-2 "><i class="material-icons ">delete</i></a></td>
-                            <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class="btn-rounded btn-large waves-effect waves-light brown darken-2 ">reserver</a></td>
+                               <td> <a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
+                             <td> <a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }" class="btn-floating btn-large waves-effect waves-light red light-2 "><i class="material-icons ">delete</i></a></td>
+                            <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class=" btn-large btn-rounded  indigo darken-2 ">resever</a></td>
                             
                             </tr>
                             </c:forEach>
@@ -82,22 +82,18 @@
             </div> 
             </div>
             
-     <!--button ajouter-->
-               
-            
-              
-    <!-- Content here -->
-         </div>
-           <div class="row">
-   <div class="col offset-s10 s2">
-                 </div>
-          </div>
+   
+
+  <!-- Modal Structure -->
+
           <div class="fixed-action-btn">
-               <a href="/Tpprojet/AjouterCli" class="btn-floating btn-large waves-effect waves-light brown darken-4 pulse"><i class="material-icons">add</i></a>
+               <a href="/Tpprojet/AjouterCli" class="btn-floating btn-large waves-effect waves-light indigo pulse"><i class="material-icons">person_add</i></a>
             
           </div>
         <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
-
+        <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js">
+         
+  
+      
     </body>
 </html>

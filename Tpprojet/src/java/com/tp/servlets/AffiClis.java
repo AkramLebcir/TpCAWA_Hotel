@@ -18,12 +18,14 @@ import com.tp.control.Clients;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
+import sun.rmi.transport.proxy.CGIHandler;
 /**
  *
  * @author alilo
  */
 public class AffiClis extends HttpServlet {
-
+ int Idv=0;
+ boolean ajo_mod=true;
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Clients tableClient = new Clients();
         try{
@@ -36,11 +38,14 @@ public class AffiClis extends HttpServlet {
         try{
             if(!request.getParameter("updateid").isEmpty()){
 
-                Client c=   tableClient.recupererClient(request.getParameter("updateid"), request);
+                 Client c=   tableClient.recupererClient(request.getParameter("updateid"), request);
+                 Idv= c.getId();
+                 ajo_mod=false;
                  request.setAttribute("client", c);
-                String id = request.getParameter("updateid");
-                 RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/Update.jsp");
-                        rd.forward(request, response);
+                 request.setAttribute("varcham", "Update");
+                 String id = request.getParameter("updateid");
+                 RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjoutCli.jsp");
+                 rd.forward(request, response);
                         request.removeAttribute("updateid");
              
 
@@ -72,8 +77,16 @@ public class AffiClis extends HttpServlet {
 //            
 //        }else{
 //        
-        Client client = new Client(0,nom,prenom,adress,tel,nationalite,null,NumId);
-        Clients tableClient = new Clients();
+        Client client = new Client(Idv,nom,prenom,adress,tel,nationalite,null,NumId);
+        Idv=0;
+             Clients tableClient = new Clients();
+            if(ajo_mod){
+            tableClient.ajouterClient(client, request);
+            }else{
+            tableClient.apdateClient(client.getNumId(),client,request);
+            }
+            ajo_mod=true;
+      
         tableClient.ajouterClient(client,request);
         request.setAttribute("Clients", tableClient.recupererClients(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");

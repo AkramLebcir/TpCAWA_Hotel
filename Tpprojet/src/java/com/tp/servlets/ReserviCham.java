@@ -6,6 +6,8 @@
 
 package com.tp.servlets;
 
+import com.tp.beans.Chambre;
+import com.tp.control.Chambres;
 import com.tp.control.Clients;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,8 +37,12 @@ public class ReserviCham extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         Clients tableClient = new Clients();
-       request.setAttribute("Clients", tableClient.recupererClients(request));
+         Chambres tablechambre = new Chambres();
+       request.setAttribute("Clientslib", tablechambre.recupererChambresLib(request));
+       
+       String idC=request.getParameter("idCli");
+       request.setAttribute("idc", idC);
+       
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/reservation.jsp");
                         rd.forward(request, response);
     }
@@ -45,9 +51,17 @@ public class ReserviCham extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
-    }
-
+         Chambres tablechambre = new Chambres();
+       request.setAttribute("Clientslib", tablechambre.recupererChambresLib(request));
+        String idc= request.getParameter("chambre");
+        Chambres tabChambres= new Chambres();
+        Chambre c= new Chambre();
+        c=tabChambres.getCham(idc, request);
+       
+       tabChambres.updateCahmbre(new Chambre(c.getId(), c.getNum(), c.getEtage(), c.getNomLit(), c.getPrix(),"0", Integer.parseInt(request.getParameter("numId"))), request);
+       
+       RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/reservation.jsp");
+                        rd.forward(request, response);
    
 
-}
+    }}

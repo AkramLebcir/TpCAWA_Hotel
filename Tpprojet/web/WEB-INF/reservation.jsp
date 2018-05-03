@@ -41,7 +41,7 @@
         
       <div class="card">
 
-    <form class="well form-horizontal" action="AffiClis" method="post"  id="contact_form">
+    <form class="well form-horizontal" action="ReserviCham" method="post"  id="contact_form">
         <div class="card-content">
 
         <!-- Form Name -->
@@ -50,6 +50,7 @@
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
         <div class="input-field col s12">
+            <i class="material-icons prefix">person</i>
             <input type="number" name="numId" id="numId" class="form-control"  value="${idc}" required>
             <label for="form1" >Id consomer</label>
         </div>
@@ -59,10 +60,10 @@
         
 
        <div class="input-field col s12">
-        <select id="nationalite" name="nationalite" class="browser-default">
+        <select id="nationalite" name="chambre" class="browser-default">
             <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Room</option>
             <c:forEach var="utilisateur" items="${Clientslib}">
-                <option value="<c:out value="${utilisateur.num}"/>"><button class="btn-default"><c:out value="${ utilisateur.num }"/> </button></option>
+                <option value="<c:out value="${utilisateur.id}"/>"><c:out value="${utilisateur.id}"/></option>
             </c:forEach>
             </select>
 
@@ -78,11 +79,14 @@
         </br> </br>
 
         <div class="input-field col s12">
+            <i class="material-icons prefix">date_range</i>
+            
             <input type="date" name="tel" id="tel" class="form-control" value="" required>
             <label for="form1" >date debut</label>
         </div>
              </br>
              <div class="input-field col s12">
+                 <i class="material-icons prefix">date_range</i>
                  <input type="date" name="tel" id="tel" class="form-control" value="<c:out value="${client.getTel()}"/>" required>
             <label for="form1" >date fin</label>
         </div>

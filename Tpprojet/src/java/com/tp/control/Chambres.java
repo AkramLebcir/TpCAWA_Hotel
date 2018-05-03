@@ -143,13 +143,13 @@ public class Chambres {
           loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE  Chambre SET num = ?, etage = ?, nomLit = ?, prix = ? WHERE id = ? ;");
+            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE  Chambre SET num = ?, etage = ?, nomLit = ?, prix = ?,dispo=? WHERE id = ? ;");
             preparedStatement.setString(1, chambre.getNum());
             preparedStatement.setString(2, chambre.getEtage());
             preparedStatement.setString(3, chambre.getNomLit());
             preparedStatement.setString(4, chambre.getPrix());
-         //   preparedStatement.setString(5, chambre.getId());
-          preparedStatement.setInt(5, chambre.getId());
+           preparedStatement.setString(6, chambre.getDispo());
+          preparedStatement.setInt(7, chambre.getId());
 //            preparedStatement.setString(6, Chambre.getDureedebut());
 //            preparedStatement.setString(7, Chambre.getDureefin());
             

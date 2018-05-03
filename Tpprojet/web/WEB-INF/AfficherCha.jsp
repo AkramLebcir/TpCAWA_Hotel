@@ -18,7 +18,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body class="brown lighten-3">
+    <body class="">
         <%@ include file="navbar.jsp" %>
         <br><div><br><br></div><br>
         
@@ -26,7 +26,7 @@
             
             <div class="card">
                 <div class="card-body">
-                    <h3>              Lists Des Chambres           </h3>
+                    <center> <h3 class="indigo-text text-darken-4">           Lists Des Chambres           </h3></center>
                     <br><br><!--<a href="/Tpprojet/AffichChaLib?chamLibid=1"><button type="button" class="btn btn-info btn-rounded">Room_libre</button></a>
 <br><br> <a href="/Tpprojet/AffichChaLib?chamLibid=0"><button type="button" class="btn btn-info btn-rounded">Room</button></a>
 
@@ -37,13 +37,13 @@
                         <thead>
                             <tr>
                                 <th> </th>
-                                <th>Number</th>
-                                <th>Storey</th>
-                                <th>Number of beds</th>
-                                <th>Price</th>
-                                <th>Available</th>
-                                <th>Edit</th>
-                                <th>Delet</th>
+                                <th  class="indigo-text text-darken-4">Number</th>
+                                <th  class="indigo-text text-darken-4">Storey</th>
+                                <th  class="indigo-text text-darken-4">Number of beds</th>
+                                <th  class="indigo-text text-darken-4">Price</th>
+                                <th  class="indigo-text text-darken-4">Available</th>
+                                <th  class="indigo-text text-darken-4">Edit</th>
+                                <th  class="indigo-text text-darken-4">Delet</th>
                                 
                             </tr>
                         </thead>
@@ -54,7 +54,7 @@
                             <c:forEach var="chambre" items="${Chambres}">
                             <tr>
                                 <th scope="row">
-                                    <span class="badge badge-primary badge-pill brown-text text-darken-4">
+                                    <span class="badge badge-primary badge-pill indigo-text text-darken-4">
                                         <c:out value="${ chambre.id }" />
                                     </span>
                                 </th>
@@ -63,9 +63,9 @@
                                 <td><c:out value="${ chambre.nomLit }" /></td>
                                 <td><c:out value="${ chambre.prix }" /></td>
                                 <td><c:out value="${ chambre.dispo }" /></td>
-                                 <td> <a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }" class="btn-floating btn-large  cyan  brown lighten-"><i class="material-icons">edit</i></a></td>
-                                 <td> <a href="/Tpprojet/AffichChaLib?deleteid=${ chambre.id }" class="btn-floating btn-large waves-effect waves-light brown darken-2 "><i class="material-icons ">delete</i></a></td>
-                            
+                                 <td> <a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }" class="btn-floating btn-large  cyan  indigo lighten-"><i class="material-icons">edit</i></a></td>
+                                 <td> <a href="/Tpprojet/AffichChaLib?deleteid=${ chambre.id }" class="btn-floating btn-large waves-effect waves-light indigo darken-2 "><i class="material-icons ">delete</i></a></td>
+                           
                             </tr>
                             </c:forEach>
                         </tbody>
@@ -82,7 +82,7 @@
          </div>
          
          <div class="fixed-action-btn">
-               <a href="/Tpprojet/AjouterCham" class="btn-floating btn-large waves-effect waves-light brown darken-4 pulse"><i class="material-icons">add</i></a>
+               <a href="/Tpprojet/AjouterCham" class="btn-floating btn-large waves-effect waves-light indigo darken-4 pulse"><i class="material-icons">add</i></a>
             
           </div>
          
