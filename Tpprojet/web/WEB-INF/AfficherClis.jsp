@@ -45,8 +45,9 @@
                                 <th class="indigo-text text-darken-4">Phone number</th>
                                 <th class="indigo-text text-darken-4">ident Number</th>
                                 
-                                <th class="indigo-text text-darken-4">Edit</th>
-                                <th class="indigo-text text-darken-4">Delet</th>
+                                <th class="indigo-text text-darken-4">Edite</th>
+                                <th class="indigo-text text-darken-4">Delete</th>
+                                 <th class="indigo-text text-darken-4">reserer</th>
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -69,7 +70,7 @@
                                 
                                <td> <a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
                              <td> <a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }" class="btn-floating btn-large waves-effect waves-light red light-2 "><i class="material-icons ">delete</i></a></td>
-                            <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class=" btn-large btn-rounded  indigo darken-2 ">resever</a></td>
+                            <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons ">hotel</i></a></td>
                             
                             </tr>
                             </c:forEach>
@@ -87,7 +88,7 @@
   <!-- Modal Structure -->
 
           <div class="fixed-action-btn">
-               <a href="/Tpprojet/AjouterCli" class="btn-floating btn-large waves-effect waves-light indigo pulse"><i class="material-icons">person_add</i></a>
+               <a href="/Tpprojet/AjouterCli" class="btn-floating btn-large waves-effect waves-light indigo darken-2 pulse"><i class="material-icons">person_add</i></a>
             
           </div>
         <!--JavaScript at end of body for optimized loading-->

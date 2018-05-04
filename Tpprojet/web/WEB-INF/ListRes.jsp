@@ -37,11 +37,10 @@
                         <thead>
                             <tr>
                                 <th> </th>
-                                <th  class="indigo-text text-darken-4">Number</th>
-                                <th  class="indigo-text text-darken-4">Storey</th>
-                                <th  class="indigo-text text-darken-4">Number of beds</th>
-                                <th  class="indigo-text text-darken-4">Price</th>
-                                <th  class="indigo-text text-darken-4">Available</th>
+                                <th  class="indigo-text text-darken-4">client</th>
+                                <th  class="indigo-text text-darken-4"> reservation</th>
+                                <th  class="indigo-text text-darken-4">Date debut</th>
+                                <th  class="indigo-text text-darken-4">Date fin</th>
                                 <th  class="indigo-text text-darken-4">Edit</th>
                                 <th  class="indigo-text text-darken-4">Delet</th>
                                 
@@ -51,20 +50,21 @@
 
                         <!--Table body-->
                         <tbody>
-                            <c:forEach var="chambre" items="${Chambres}">
+                            <c:forEach var="reservation" items="${Reservs}">
                             <tr>
                                 <th scope="row">
                                     <span class="badge badge-primary badge-pill indigo-text text-darken-4">
-                                        <c:out value="${ chambre.id }" />
+                                        <c:out value="${  reservation.getId() }" />
                                     </span>
+             
                                 </th>
-                                <td><c:out value="${ chambre.num }" /></td>
-                                <td><c:out value="${ chambre.etage }" /></td>
-                                <td><c:out value="${ chambre.nomLit }" /></td>
-                                <td><c:out value="${ chambre.prix }" /></td>
-                                <td><c:out value="${ chambre.dispo }" /></td>
-                                 <td> <a href="/Tpprojet/AffichChaLib?updateid=${ chambre.id }" class="btn-floating btn-large  waves-effect waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
-                                 <td> <a href="/Tpprojet/AffichChaLib?deleteid=${ chambre.id }" class="btn-floating btn-large waves-effect waves-light red darken-2 "><i class="material-icons ">delete</i></a></td>
+                                <td><c:out value="${  reservation.getIdCh()}" /></td>
+                                <td><c:out value="${  reservation.getIdCl() }" /></td>
+                                <td><c:out value="${  reservation.getDateD() }" /></td>
+                                <td><c:out value="${  reservation.getDateF() }" /></td>
+                               
+                                 <td> <a href="/Tpprojet/AffichChaLib?updateid=${  reservation.id }" class="btn-floating btn-large  waves-effect waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
+                                 <td> <a href="/Tpprojet/AffichChaLib?deleteid=${  reservation.id }" class="btn-floating btn-large waves-effect waves-light red darken-2 "><i class="material-icons ">delete</i></a></td>
                            
                             </tr>
                             </c:forEach>

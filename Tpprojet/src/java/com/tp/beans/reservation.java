@@ -12,12 +12,12 @@ package com.tp.beans;
  */
 public class reservation {
  private   int id;
- private int idCh;
- private int idCl;
+ private String idCh;
+ private String idCl;
  private String dateD;
  private String dateF;
 
-    public reservation(int id, int idCh, int idCl, String dateD, String dateF) {
+    public reservation(int id, String idCh, String idCl, String dateD, String dateF) {
         this.id = id;
         this.idCh = idCh;
         this.idCl = idCl;
@@ -29,11 +29,11 @@ public class reservation {
         return id;
     }
 
-    public int getIdCh() {
+    public String getIdCh() {
         return idCh;
     }
 
-    public int getIdCl() {
+    public String getIdCl() {
         return idCl;
     }
 
@@ -49,11 +49,11 @@ public class reservation {
         this.id = id;
     }
 
-    public void setIdCh(int idCh) {
+    public void setIdCh(String idCh) {
         this.idCh = idCh;
     }
 
-    public void setIdCl(int idCl) {
+    public void setIdCl(String idCl) {
         this.idCl = idCl;
     }
 

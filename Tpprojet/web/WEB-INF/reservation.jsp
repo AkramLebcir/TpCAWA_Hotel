@@ -48,14 +48,18 @@
         <legend><center><h2>Reserever </h2></center></legend>
 
         <!-- Text input-->
-        <p id="profile-name" class="profile-name-card">${ERRCh}</p>
+        <p id="profile-name" class="profile-name-card">${err}</p>
         <div class="input-field col s12">
             <i class="material-icons prefix">person</i>
             <input type="number" name="numId" id="numId" class="form-control"  value="${idc}" required>
             <label for="form1" >Id consomer</label>
         </div>
-       
-       <p id="profile-name" class="profile-name-card" name="id"><c:out value="${client.id}"/></p>
+       <div class="input-field col s12">
+            <i class="material-icons prefix">hotel</i>
+            <input type="number" name="numId" id="nbrlit" class="form-control"  value="" required>
+            <label for="form1" >nombre de lit</label>
+        </div>
+     
 
         
 

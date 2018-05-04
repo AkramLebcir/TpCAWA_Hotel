@@ -50,19 +50,9 @@ public class AffichChaLib extends HttpServlet {
         
         
         
-         try{
-            if(!request.getParameter("chamLibid").isEmpty()){
-                String id= request.getParameter("chamLibid");
-                if(id.equalsIgnoreCase("1")){
-                request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));}
-                else{
-                  request.setAttribute("Chambres", tableChambre.recupererChambres(request));   
-                }
-            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
-            rd.forward(request, response);
-            }}catch(Exception e){}
+       
         
-        request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));
+        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
         rd.forward(request, response);
     }

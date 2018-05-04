@@ -18,7 +18,7 @@
         <li><a href="/Tpprojet/AffiClis">View clients</a></li>
         <li><a href="/Tpprojet/AffichChaLib">View rooms</a></li>
         <li><a href="/Tpprojet/ReserviCham">Reservation</a></li>
-        <li><a href="/Tpprojet/Sinup">Sign up</a></li>
+        <li><a href="/Tpprojet/Sinup">log out</a></li>
       </ul>
 
     </div>

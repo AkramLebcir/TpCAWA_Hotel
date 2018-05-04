@@ -148,8 +148,8 @@ public class Chambres {
             preparedStatement.setString(2, chambre.getEtage());
             preparedStatement.setString(3, chambre.getNomLit());
             preparedStatement.setString(4, chambre.getPrix());
-           preparedStatement.setString(6, chambre.getDispo());
-          preparedStatement.setInt(7, chambre.getId());
+           preparedStatement.setString(5, chambre.getDispo());
+          preparedStatement.setInt(6, chambre.getId());
 //            preparedStatement.setString(6, Chambre.getDureedebut());
 //            preparedStatement.setString(7, Chambre.getDureefin());
             
@@ -159,22 +159,7 @@ public class Chambres {
         }
          
          
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+ 
     }
      
       public Chambre getCham(String Id,HttpServletRequest request ) {
@@ -281,5 +266,36 @@ public class Chambres {
         return Chambres;
     }
     
-       
+       public void liberChambre(String id,HttpServletRequest request){
+       loadDatabase(request);
+        
+        try {
+            PreparedStatement preparedStatement = connexion.prepareStatement("UPDATE  Chambre SET dispo = 0 WHERE id = ? ;");
+            preparedStatement.setString(1, id);
+           
+//            
+            
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+    }
 }
