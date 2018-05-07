@@ -33,6 +33,7 @@ public class AffiClis extends HttpServlet {
                 String id = request.getParameter("deleteid");
                 tableClient.DeleteClient(id, request);
                 request.removeAttribute("deleteid");
+                
             }
         }catch(Exception e){}
         try{
@@ -87,7 +88,7 @@ public class AffiClis extends HttpServlet {
             }
             ajo_mod=true;
       
-        tableClient.ajouterClient(client,request);
+       
         request.setAttribute("Clients", tableClient.recupererClients(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
         rd.forward(request, response);

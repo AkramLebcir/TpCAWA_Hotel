@@ -51,12 +51,12 @@
         <p id="profile-name" class="profile-name-card">${err}</p>
         <div class="input-field col s12">
             <i class="material-icons prefix">person</i>
-            <input type="number" name="numId" id="numId" class="form-control"  value="${idc}" required>
+            <input type="number" name="Idcl" id="numId" class="form-control"  value="${idc}" required>
             <label for="form1" >Id consomer</label>
         </div>
        <div class="input-field col s12">
             <i class="material-icons prefix">hotel</i>
-            <input type="number" name="numId" id="nbrlit" class="form-control"  value="" required>
+            <input type="number" name="IdCh" id="nbrlit" class="form-control"   required>
             <label for="form1" >nombre de lit</label>
         </div>
      
@@ -65,7 +65,7 @@
 
        <div class="input-field col s12">
         <select id="nationalite" name="chambre" class="browser-default">
-            <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Room</option>
+            <option value="<c:out value="${client.nationalite}"/>"  selected>libre room</option>
             <c:forEach var="utilisateur" items="${Clientslib}">
                 <option value="<c:out value="${utilisateur.id}"/>"><c:out value="${utilisateur.id}"/></option>
             </c:forEach>
@@ -85,24 +85,27 @@
         <div class="input-field col s12">
             <i class="material-icons prefix">date_range</i>
             
-            <input type="date" name="tel" id="tel" class="form-control" value="" required>
+            <input type="date" name="dateD" id="tel" class="form-control" value="" required>
             <label for="form1" >date debut</label>
         </div>
              </br>
              <div class="input-field col s12">
                  <i class="material-icons prefix">date_range</i>
-                 <input type="date" name="tel" id="tel" class="form-control" value="<c:out value="${client.getTel()}"/>" required>
+                 <input type="date" name="dateF" id="tel" class="form-control" value="" required>
             <label for="form1" >date fin</label>
         </div>
  </br>
         <div class="text-center mt-4">
-            <center> <button class="btn btn-rounded large" type="submit">Save</button></center>
+            <center> <button class="btn-large z-depth-0 indigo" type="submit">Save</button></center>
         </div>
         </div>
     </form>
 </div>
 
-
+<div class="fixed-action-btn">
+               <a href="/Tpprojet/ReserviCham?idR=1" class="btn-floating btn-large waves-effect waves-light indigo darken-2 pulse"><i class="material-icons">format_list_bulleted</i></a>
+            
+          </div>
 
 <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>

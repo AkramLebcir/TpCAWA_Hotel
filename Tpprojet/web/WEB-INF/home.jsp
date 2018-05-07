@@ -22,7 +22,7 @@
 
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
-    <body class="hidden-sn mdb-skin">
+    <body class="hidden-sn mdb-skin" style="background-image: url('')">
       <%@ include file="navbar.jsp" %>
 
       <br><br><br>

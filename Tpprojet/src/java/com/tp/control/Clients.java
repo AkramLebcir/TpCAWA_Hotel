@@ -124,9 +124,10 @@ public class Clients {
         loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("DELETE FROM Client WHERE id=?;");
-            preparedStatement.setString(1, id);
+            PreparedStatement preparedStatement = connexion.prepareStatement("DELETE FROM  client WHERE  client.id  = ?;");
             
+            preparedStatement.setString(1, id);
+               
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

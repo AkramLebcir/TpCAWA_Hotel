@@ -26,7 +26,7 @@
             
             <div class="card">
                 <div class="card-body">
-                    <center> <h3 class="indigo-text text-darken-4">           Lists Des Chambres           </h3></center>
+                    <center> <h3 class="indigo-text text-darken-4">           Lists Des resarevations           </h3></center>
                     <br><br><!--<a href="/Tpprojet/AffichChaLib?chamLibid=1"><button type="button" class="btn btn-info btn-rounded">Room_libre</button></a>
 <br><br> <a href="/Tpprojet/AffichChaLib?chamLibid=0"><button type="button" class="btn btn-info btn-rounded">Room</button></a>
 
@@ -38,12 +38,10 @@
                             <tr>
                                 <th> </th>
                                 <th  class="indigo-text text-darken-4">client</th>
-                                <th  class="indigo-text text-darken-4"> reservation</th>
+                                <th  class="indigo-text text-darken-4"> Chambre</th>
                                 <th  class="indigo-text text-darken-4">Date debut</th>
                                 <th  class="indigo-text text-darken-4">Date fin</th>
-                                <th  class="indigo-text text-darken-4">Edit</th>
-                                <th  class="indigo-text text-darken-4">Delet</th>
-                                
+                               
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -58,14 +56,13 @@
                                     </span>
              
                                 </th>
-                                <td><c:out value="${  reservation.getIdCh()}" /></td>
+                                
                                 <td><c:out value="${  reservation.getIdCl() }" /></td>
+                                <td><c:out value="${  reservation.getIdCh()}" /></td>
                                 <td><c:out value="${  reservation.getDateD() }" /></td>
                                 <td><c:out value="${  reservation.getDateF() }" /></td>
                                
-                                 <td> <a href="/Tpprojet/AffichChaLib?updateid=${  reservation.id }" class="btn-floating btn-large  waves-effect waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
-                                 <td> <a href="/Tpprojet/AffichChaLib?deleteid=${  reservation.id }" class="btn-floating btn-large waves-effect waves-light red darken-2 "><i class="material-icons ">delete</i></a></td>
-                           
+                               
                             </tr>
                             </c:forEach>
                         </tbody>
@@ -82,7 +79,7 @@
          </div>
          
          <div class="fixed-action-btn">
-               <a href="/Tpprojet/AjouterCham" class="btn-floating btn-large waves-effect waves-light indigo darken-3 pulse"><i class="material-icons">add</i></a>
+               <a href="/Tpprojet/ReserviCham" class="btn-floating btn-large waves-effect waves-light indigo darken-3 pulse"><i class="material-icons">hotel</i></a>
             
           </div>
          

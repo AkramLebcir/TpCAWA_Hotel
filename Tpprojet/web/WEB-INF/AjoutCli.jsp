@@ -352,7 +352,7 @@
         </div>  
 
         <div class="text-center mt-4">
-            <center><button class="btn large btn-primary" type="submit">Save</button></center>
+            <center><button class="btn-large z-depth-0 indigo" type="submit">Save</button></center>
         </div>
         </div>
     </form>

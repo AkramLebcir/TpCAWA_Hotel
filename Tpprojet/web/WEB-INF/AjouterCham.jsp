@@ -73,7 +73,7 @@
                </div>
               
                    <div class="text-center mt-4">
-                        <button class="btn btn-primary" type="submit">Save</button>
+                        <button class="btn-large z-depth-0 indigo" type="submit">Save</button>
                    </div>
 
             </div>

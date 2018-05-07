@@ -12,7 +12,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,6 +28,17 @@ public class reservations {
      private Connection connexion;
     private String passBdd;
     private String portBdd;
+    
+   public boolean verifieDate(String data1) throws ParseException{
+      Date aujourdhui = new Date();
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+      Date date1 = sdf.parse(data1); 
+      String datA= sdf.format(aujourdhui);
+      Date d =sdf.parse(datA);
+      return date1.before(d);
+
+    }
+    
      private void loadDatabase(HttpServletRequest request) {
         // Chargement du driver
         HttpSession session = request.getSession();
@@ -46,16 +60,16 @@ public class reservations {
         }
     }
      
-       public void AjouterReserva(reservation reservation,HttpServletRequest request) {
+       public void AjouterReserva(String IdCl,String IdCh,String DateD,String DateF ,HttpServletRequest request) {
         loadDatabase(request);
         
         try {
-            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO Client(idR, numClient ,  numChambre ,  datedebut ,  datefin) VALUES(?, ?, ?, ?,?);");
-            preparedStatement.setInt(1, reservation.getId());
-            preparedStatement.setString(2, reservation.getIdCl());
-             preparedStatement.setString(3, reservation.getIdCh());
-              preparedStatement.setString(4, reservation.getDateD());
-               preparedStatement.setString(5, reservation.getDateF());
+            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO   reservation   (  idR  ,   numClient  ,   numChambre  ,   datedebut  ,   datefin  ) VALUES (NULL,?,?,?,?);");
+         //   preparedStatement.setInt(1, reservation.getId );
+           preparedStatement.setString(1, IdCl);
+             preparedStatement.setString(2, IdCh );
+             preparedStatement.setString(3,DateD );
+             preparedStatement.setString(4, DateF );
          
             
             
@@ -91,7 +105,7 @@ public class reservations {
                  reservation.setIdCl(numClient);
                  reservation.setIdCh(numChambre);
                  reservation.setDateD(datedebut);
-                 reservation.setDateD(datefin);
+                 reservation.setDateF(datefin);
                  
                 
                 Reservations.add(reservation);

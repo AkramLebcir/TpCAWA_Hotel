@@ -31,6 +31,7 @@ public class AffichChaLib extends HttpServlet {
                 String id = request.getParameter("deleteid");
                 tableChambre.DeleteChambre(id, request);
                 request.removeAttribute("deleteid");
+                
             }
         }catch(Exception e){}
         try{
@@ -75,13 +76,13 @@ public class AffichChaLib extends HttpServlet {
         else{*/
         
             Chambre chambre = new Chambre(Idv,num,etage,nomLit,prix,"1",-1);
-            Idv=0;
             Chambres tableChambre = new Chambres();
             if(ajo_mod){
             tableChambre.ajouterChambre(chambre, request);
             }else{
             tableChambre.updateCahmbre(chambre,request);
             }
+             Idv=0;
             ajo_mod=true;
            // request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
