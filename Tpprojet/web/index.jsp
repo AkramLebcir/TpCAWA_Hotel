@@ -22,9 +22,70 @@
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
+    <nav class="nav-extended indigo">
+
+  
+    <div class="nav-background">
+      <div class="pattern active" style="background-image: url('//cdn.shopify.com/s/files/1/2030/2737/files/icon-seamless_ef568d79-394b-49ab-a3c5-128827d788e8.png?v=1496294246');"></div>
+    </div>
+  
+
+  <div class="nav-wrapper container">
+    <a href="/" itemprop="url" class="brand-logo site-logo">
+      
+        Hotel
+      
+    </a>
+
+    
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons"></i></a>
+  
+  </div>
+  
+  <div class="nav-header center">
+  
+
+ 
+      <h1>Receptionniste</h1>
+      <div class="tagline">authentication</div>
+    
+
+  </div>
+</nav>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <body class="grey lighten-2">
         
-        <br><br><br> <br><br><br>
+        
        <div class="container">
         <div class="row valign-wrapper">
          <div class="col s5 offset-s3 valign">

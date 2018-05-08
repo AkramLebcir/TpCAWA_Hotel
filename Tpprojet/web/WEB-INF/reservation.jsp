@@ -56,22 +56,22 @@
         </div>
        <div class="input-field col s12">
             <i class="material-icons prefix">hotel</i>
-            <input type="number" name="IdCh" id="nbrlit" class="form-control"   required>
+            <input type="number" name="IdCh" id="nbrlit" class="form-control"  value="${nbrLit}" required>
             <label for="form1" >nombre de lit</label>
         </div>
      
 
         
 
-     <!--  <div class="input-field col s12">
+    <div class="input-field col s12">
         <select id="nationalite" name="chambre" class="browser-default">
             <option value="<c:out value="${client.nationalite}"/>"  selected>libre room</option>
             <c:forEach var="utilisateur" items="${Clientslib}">
-                <option value="<c:out value="${utilisateur.id}"/>"><c:out value="${utilisateur.id}"/></option>
+                <option value="<c:out value="${utilisateur.id}"/>">num:<c:out value="${utilisateur.num}"/>,nombre lit: <c:out value="${utilisateur.nomLit}"/>,prix :<c:out value="${utilisateur.prix}"/></option>
             </c:forEach>
             </select>
 
-        </div>-->
+        </div>
         <!-- Text input-->
        
 
@@ -83,13 +83,13 @@
         <div class="input-field col s12">
             <i class="material-icons prefix">date_range</i>
             
-            <input type="date" name="dateD" id="tel" class="form-control" value="" required>
+            <input type="date" name="dateD" id="tel" class="form-control" value="${dateD}" required>
             <label for="form1" >date debut</label>
         </div>
              </br>
              <div class="input-field col s12">
                  <i class="material-icons prefix">date_range</i>
-                 <input type="date" name="dateF" id="tel" class="form-control" value="" required>
+                 <input type="date" name="dateF" id="tel" class="form-control" value="${dateF}" required>
             <label for="form1" >date fin</label>
         </div>
  </br>

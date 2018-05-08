@@ -65,15 +65,6 @@ public class AffichChaLib extends HttpServlet {
         String nomLit = request.getParameter("nomLit");
         String prix = request.getParameter("prix");
      
-        //String dispo = request.getParameter("dispo");
-                        
-       /* if(num.equalsIgnoreCase("")||etage.equalsIgnoreCase("")||nomLit.equalsIgnoreCase("")||prix.equalsIgnoreCase(""))
-        {
-            request.setAttribute("ERRCh", "remplir tout les chamep");
-            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
-            rd.forward(request, response);      
-        }
-        else{*/
         
             Chambre chambre = new Chambre(Idv,num,etage,nomLit,prix,"1",-1);
             Chambres tableChambre = new Chambres();
@@ -84,10 +75,10 @@ public class AffichChaLib extends HttpServlet {
             }
              Idv=0;
             ajo_mod=true;
-           // request.setAttribute("Chambres", tableChambre.recupererChambresLib(request));
+          
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
             RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
             rd.forward(request, response);
-       // }
+      
     }
 }

@@ -28,6 +28,7 @@ public class reservations {
      private Connection connexion;
     private String passBdd;
     private String portBdd;
+    // verifiet si la date de resarvation terminer 
     
    public boolean verifieDate(String data1) throws ParseException{
       Date aujourdhui = new Date();
@@ -60,7 +61,7 @@ public class reservations {
         }
     }
      
-       public void AjouterReserva(String IdCl,String IdCh,String DateD,String DateF ,HttpServletRequest request) {
+     public void AjouterReserva(String IdCl,String IdCh,String DateD,String DateF ,HttpServletRequest request) {
         loadDatabase(request);
         
         try {
@@ -78,7 +79,7 @@ public class reservations {
             e.printStackTrace();
         }
     }
-      public List<reservation> RcupererReservations(HttpServletRequest request) {
+    public List<reservation> RcupererReservations(HttpServletRequest request) {
         List<reservation> Reservations = new ArrayList<reservation>();
           Statement statement = null;
           ResultSet resultat = null;
