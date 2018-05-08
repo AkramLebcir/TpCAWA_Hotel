@@ -203,8 +203,8 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 body{
-    background-image: url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj64v6gsuXaAhUIuBQKHdW5BVwQjRx6BAgBEAU&url=https%3A%2F%2Fdemos.exasrc.com%2Frubidium%2F&psig=AOvVaw0wwNfbWKKn26-q3uL8cl_l&ust=1525294282841488");
-  //  background-color: #9e9e9e !important;;
+  
+   background-color: #9e9e9e ;
   //  background-image: url("http://hdqwalls.com/wallpapers/material-design-blue-and-white-to.jpg");
   // background-color: #1c2a48 !important;
 }

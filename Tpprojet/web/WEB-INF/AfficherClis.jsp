@@ -22,7 +22,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body >
+    <body  class="grey lighten-2">
          <%@ include file="navbar.jsp" %>
          <br><div><br><br></div><br>
          

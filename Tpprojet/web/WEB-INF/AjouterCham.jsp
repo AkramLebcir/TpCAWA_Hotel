@@ -34,7 +34,7 @@
             }
         </style>
     </head>
-    <body> 
+    <body class="grey lighten-2"> 
      <!-- inclusion de navbar-->   
          <%@ include file="navbar.jsp" %>
             <br><div><br><br></div><br>

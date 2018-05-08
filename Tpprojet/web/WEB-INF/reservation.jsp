@@ -33,7 +33,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="grey lighten-2">
            
         
       <%@ include file="navbar.jsp" %>
@@ -63,7 +63,7 @@
 
         
 
-       <div class="input-field col s12">
+     <!--  <div class="input-field col s12">
         <select id="nationalite" name="chambre" class="browser-default">
             <option value="<c:out value="${client.nationalite}"/>"  selected>libre room</option>
             <c:forEach var="utilisateur" items="${Clientslib}">
@@ -71,16 +71,14 @@
             </c:forEach>
             </select>
 
-            
-
-        </div>
+        </div>-->
         <!-- Text input-->
        
 
 
         <!-- Text input-->
         
-        </br> </br>
+        </br> 
 
         <div class="input-field col s12">
             <i class="material-icons prefix">date_range</i>

@@ -22,11 +22,9 @@
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
-    <body>
-          <div class="nav-background">
-        <div class="ea k" style="background-image: url('//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?4270082251086927343');"></div>
-      </div>
-        <br><br><br>
+    <body class="grey lighten-2">
+        
+        <br><br><br> <br><br><br>
        <div class="container">
         <div class="row valign-wrapper">
          <div class="col s5 offset-s3 valign">
