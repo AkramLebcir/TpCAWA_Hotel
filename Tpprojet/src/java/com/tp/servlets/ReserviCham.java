@@ -83,7 +83,7 @@ public class ReserviCham extends HttpServlet {
         String nbrLit=request.getParameter("IdCh");
         String dateD= request.getParameter("dateD");
         String dateF= request.getParameter("dateF");
-        
+        String idch= request.getParameter("chambre");
         
        // tester si le client exist dans la bdd
         Clients c= new Clients();
@@ -143,7 +143,7 @@ public class ReserviCham extends HttpServlet {
      // verfication de nombre de lit dans les chambre dispnible
         
         for (int i = 0; i < chambres.size(); i++) {
-           if(Integer.parseInt(chambres.get(i).getNomLit())>=Integer.parseInt(nbrLit)) {
+           if(Integer.parseInt(chambres.get(i).getNomLit())>=Integer.parseInt(nbrLit)&&chambres.get(i).getId()==Integer.parseInt(idch)) {
             
                tablechambre.liberChambre( String.valueOf(chambres.get(i).getId()), request);
                tabR.AjouterReserva( idcli, String.valueOf(chambres.get(i).getId()), dateD, dateF, request);

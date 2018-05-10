@@ -22,7 +22,7 @@
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
     </head>
-    <nav class="nav-extended indigo">
+    <nav class="nav-extended indigo row">
 
   
     <div class="nav-background">
@@ -33,7 +33,7 @@
   <div class="nav-wrapper container">
     <a href="/" itemprop="url" class="brand-logo site-logo">
       
-        Hotel
+       
       
     </a>
 
@@ -41,13 +41,15 @@
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons"></i></a>
   
   </div>
-  
-  <div class="nav-header center">
+       
+  <div class="nav-header center s5 offset-s4">
   
 
  
-      <h1>Receptionniste</h1>
-      <div class="tagline">authentication</div>
+        <h1>Receptionniste</h1>
+        <div class="tagline">authentication</div>
+      
+      
     
 
   </div>
@@ -85,16 +87,19 @@
     
     <body class="grey lighten-2">
         
-        
-       <div class="container">
-        <div class="row valign-wrapper">
-         <div class="col s5 offset-s3 valign">
-          <div class="card center-align">
-        <!--      <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="avatar mx-auto white" class="avatar" style="width: 40%;height: 20%;border-radius: 50%;">-->
-        <h4 class="center"> Login</h4>
-        <p id="profile-name" class="profile-name-card">${ERR}</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <main role="main" id="MainContent">
+    <div class="section container">
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <div class="card login-wrapper">
+        <div class="card-content">
+            <div id="CustomerLoginForm" > 
+              
            
            <form action="home" method="POST">
+               <h4 class="center"> Login</h4>
+             <p id="profile-name" class="profile-name-card">${ERR}</p>
                <div class="input-field col s12">
                    <i class="material-icons prefix">person</i>
                 <input id="user" name="user" type="text" class="validate">
@@ -106,20 +111,26 @@
                 <label for="user">Password</label>
                </div>
                
-                  <button class="btn-large z-depth-0 indigo" type="submit" name="action">Sign in
-                    <i class="material-icons right">send</i>
+                  <button class="btn-large col s12 indigo " type="submit" name="action">Sign In
+                    
                   </button>
-               <div id="remember" class="checkbox">
+               <div id="remember" class="checkbox center">
                   <label>
                      <input type="checkbox" value="remember-me"> Remember me
                   </label>
                 </div>
             </form><!-- /form -->
-                </div>
-           </div>
+                  </form>
+
+          </div>
         </div>
-           </div>
+      </div>
+    </div>
+  </div>
+</div>c
+                </main>
           <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
     </body>
 </html>
+

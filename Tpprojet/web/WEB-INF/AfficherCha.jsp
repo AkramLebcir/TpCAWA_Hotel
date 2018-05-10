@@ -86,9 +86,13 @@
             
           </div>
          
-
-         <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="/Tpprojet/static/js/materialize.min.js"></script>
-
+         
+         
+         
+         
+         
+         
+         
+         
     </body>
 </html>
