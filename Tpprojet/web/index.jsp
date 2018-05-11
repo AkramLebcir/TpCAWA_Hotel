@@ -46,7 +46,7 @@
   
 
  
-        <h1>Receptionniste</h1>
+        <h1>Receptionist</h1>
         <div class="tagline">authentication</div>
       
       

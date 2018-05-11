@@ -26,7 +26,7 @@
             
             <div class="card">
                 <div class="card-body">
-                    <center> <h3 class="indigo-text text-darken-4">           Lists Des Chambres           </h3></center>
+                    <center> <h3 class="indigo-text text-darken-4">  List of rooms           </h3></center>
                     <br><br><!--<a href="/Tpprojet/AffichChaLib?chamLibid=1"><button type="button" class="btn btn-info btn-rounded">Room_libre</button></a>
 <br><br> <a href="/Tpprojet/AffichChaLib?chamLibid=0"><button type="button" class="btn btn-info btn-rounded">Room</button></a>
 
@@ -42,8 +42,8 @@
                                 <th  class="indigo-text text-darken-4">Number of beds</th>
                                 <th  class="indigo-text text-darken-4">Price</th>
                                 <th  class="indigo-text text-darken-4">Available</th>
-                                <th  class="indigo-text text-darken-4">Edit</th>
-                                <th  class="indigo-text text-darken-4">Delet</th>
+                                <th  class="indigo-text text-darken-4">Edite</th>
+                                <th  class="indigo-text text-darken-4">Delete</th>
                                 
                             </tr>
                         </thead>

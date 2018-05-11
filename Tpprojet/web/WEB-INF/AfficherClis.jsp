@@ -30,7 +30,7 @@
           
             <div class="card col s11">
                 <div class="card-body">
-                    <center> <h3 class="indigo-text text-darken-4">    Lists Des Clients </h3></center></br></br></br>
+                    <center> <h3 class="indigo-text text-darken-4">    Customer Lists </h3></center></br></br></br>
                     <!--Table-->
                     <table class="table table-hover table-responsive-md table-fixed">
 
@@ -47,7 +47,7 @@
                                 
                                 <th class="indigo-text text-darken-4">Edite</th>
                                 <th class="indigo-text text-darken-4">Delete</th>
-                                 <th class="indigo-text text-darken-4">reserer</th>
+                                 <th class="indigo-text text-darken-4">book</th>
                             </tr>
                         </thead>
                         <!--Table head-->

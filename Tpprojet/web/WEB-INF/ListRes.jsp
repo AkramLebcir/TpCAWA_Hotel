@@ -26,7 +26,7 @@
             
             <div class="card">
                 <div class="card-body">
-                    <center> <h3 class="indigo-text text-darken-4">           Lists Des resarevations           </h3></center>
+                    <center> <h3 class="indigo-text text-darken-4">         Lists Reservations          </h3></center>
                     <br><br><!--<a href="/Tpprojet/AffichChaLib?chamLibid=1"><button type="button" class="btn btn-info btn-rounded">Room_libre</button></a>
 <br><br> <a href="/Tpprojet/AffichChaLib?chamLibid=0"><button type="button" class="btn btn-info btn-rounded">Room</button></a>
 
@@ -37,10 +37,10 @@
                         <thead>
                             <tr>
                                 <th> </th>
-                                <th  class="indigo-text text-darken-4">client</th>
-                                <th  class="indigo-text text-darken-4"> Chambre</th>
-                                <th  class="indigo-text text-darken-4">Date debut</th>
-                                <th  class="indigo-text text-darken-4">Date fin</th>
+                                <th  class="indigo-text text-darken-4">customer</th>
+                                <th  class="indigo-text text-darken-4"> room</th>
+                                <th  class="indigo-text text-darken-4">Start date</th>
+                                <th  class="indigo-text text-darken-4">End date</th>
                                
                             </tr>
                         </thead>

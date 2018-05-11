@@ -45,7 +45,7 @@
         <div class="card-content">
 
         <!-- Form Name -->
-        <legend><center><h2>Reserever </h2></center></legend>
+        <legend><center><h2>book a room </h2></center></legend>
 
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${err}</p>
@@ -57,7 +57,7 @@
        <div class="input-field col s12">
             <i class="material-icons prefix">hotel</i>
             <input type="number" name="IdCh" id="nbrlit" class="form-control"  value="${nbrLit}" required>
-            <label for="form1" >nombre de lit</label>
+            <label for="form1" >number of beds</label>
         </div>
      
 
@@ -65,7 +65,7 @@
 
     <div class="input-field col s12">
         <select id="nationalite" name="chambre" class="browser-default">
-            <option value="<c:out value="${client.nationalite}"/>"  selected>libre room</option>
+            <option value="<c:out value="${client.nationalite}"/>"  selected>free room</option>
             <c:forEach var="utilisateur" items="${Clientslib}">
                 <option value="<c:out value="${utilisateur.id}"/>">num:<c:out value="${utilisateur.num}"/>,nombre lit: <c:out value="${utilisateur.nomLit}"/>,prix :<c:out value="${utilisateur.prix}"/></option>
             </c:forEach>
@@ -84,13 +84,13 @@
             <i class="material-icons prefix">date_range</i>
             
             <input type="date" name="dateD" id="tel" class="form-control" value="${dateD}" required>
-            <label for="form1" >date debut</label>
+            <label for="form1" >Start date</label>
         </div>
              </br>
              <div class="input-field col s12">
                  <i class="material-icons prefix">date_range</i>
                  <input type="date" name="dateF" id="tel" class="form-control" value="${dateF}" required>
-            <label for="form1" >date fin</label>
+            <label for="form1" >End date</label>
         </div>
  </br>
         <div class="text-center mt-4">

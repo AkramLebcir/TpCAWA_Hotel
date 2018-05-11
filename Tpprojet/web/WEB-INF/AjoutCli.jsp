@@ -55,21 +55,21 @@
         <div class="input-field col s12">
             <i class="material-icons prefix">person</i>
             <input id="nom"  name="nom"  type="text" class="validate" value="<c:out value="${client.nom}"/>" required>
-            <label for="nom" >Nom</label>
+            <label for="nom" >Name</label>
         </div>
 
         <!-- Text input-->
         <div class="input-field col s12">
             <i class="material-icons prefix">person_outline</i>
             <input type="text" name="prenom" id="prenom" class="validate" value="<c:out value="${client.prenom}"/>" required>
-            <label for="form1" >Prenom</label>
+            <label for="form1" >First name</label>
         </div>
                 <br>
 
        <div class="input-field col s12">
            <i class="material-icons prefix"></i>
         <select id="nationalite" name="nationalite" class="browser-default">
-            <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your Nationalite</option>
+            <option value="<c:out value="${client.nationalite}"/>"  selected>Choose your nationality</option>
 
             <option value="Afghanistan">Afghanistan </option>
             <option value="Afrique_Centrale">Afrique_Centrale </option>
@@ -341,7 +341,7 @@
         <div class="input-field col s12">
             <i class="material-icons prefix">person_pin</i>
             <input type="text" name="numId" id="numId" class="form-control" value="<c:out value="${client.getNumId()}"/>" required>
-            <label for="form1" >Piece d'identite No</label>
+            <label for="form1" >ID </label>
         </div>
 
 

@@ -37,19 +37,19 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center white-text ">Bienvenue! ${user}</h1>
+        <h1 class="header center white-text ">Welcome  ${user}</h1>
         <div class="row center">
-          <h5 class="header col s12 light white-text">Ajouter un Client</h5>
+          <h5 class="header col s12 light white-text">Add a Customer</h5>
         </div>
         <div class="row center">
-          <a href="/Tpprojet/AjouterCli" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Commencer</a>
+          <a href="/Tpprojet/AjouterCli" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Start</a>
         </div>
         
 
       </div>
     </div>
           
-    <div class="parallax"><img src="/Tpprojet/static/userBackground.jpg" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 207.728px, 0px); opacity: 1;"></div>
+    <div class="parallax"><img src="/Tpprojet/static/userBackground.png" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 207.728px, 0px); opacity: 1;"></div>
   </div>
       
        <footer class="page-footer indigo darken-1">
@@ -62,9 +62,9 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">List</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/ReserviCham?idR=1">List des reservaton</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/AjouterCli">Ajouter Client</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/AjouterCham">Ajouter Chambre</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/ReserviCham?idR=1">List of reservations</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/AjouterCli">Add Customer</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/Tpprojet/AjouterCham">Add room</a></li>
                   
                 </ul>
               </div>

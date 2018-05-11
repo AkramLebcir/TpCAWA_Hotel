@@ -51,14 +51,14 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">format_list_numbered</i>
                     <input id="num" name="num" type="number" class="validate" value="<c:out value="${chambre.getNum()}"/>" required>
-                    <label for="num">Numero de la chambre</label>
+                    <label for="num">Room number</label>
                </div>
   
                    <!-- Text input-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">business</i>
                     <input id="etage" name="etage" type="number" class="validate" value="<c:out value="${chambre.getEtage()}"/>" required>
-                    <label for="etage">Etage</label>
+                    <label for="etage">Floor</label>
                </div>
                 
                    <!-- Text input-->
@@ -66,14 +66,14 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">hotel</i>
                     <input id="nomLit" name="nomLit" type="number" class="validate" value="<c:out value="${chambre.getNomLit()}"/>" required>
-                    <label for="nomLit">Numbre  de lit</label>
+                    <label for="nomLit">Number of beds</label>
                </div>
                 
                    <!-- Text input-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">attach_money</i>
                     <input id="prix" name="prix" type="number" class="validate" value="<c:out value="${chambre.getPrix()}"/>" required>
-                    <label for="prix">Prix</label>
+                    <label for="prix">Price</label>
                </div>
               
                    <div class="text-center mt-4">
