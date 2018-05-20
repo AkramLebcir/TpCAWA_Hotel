@@ -20,7 +20,7 @@
         
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customer Lists</title>
+        <title>JSP Page</title>
     </head>
     <body  class="grey lighten-2">
          <%@ include file="navbar.jsp" %>
@@ -37,13 +37,14 @@
                         <!--Table head-->
                         <thead>
                             <tr>
-                                <th class="indigo-text text-darken-4"> ID</th>
-                                <th class="indigo-text text-darken-4">Name</th>
+                                <th>  </th>
+                                <th  class="indigo-text text-darken-4">Name</th>
                                 <th class="indigo-text text-darken-4">Surname</th>
                                 <th class="indigo-text text-darken-4">Country</th>
                                 <th class="indigo-text text-darken-4">Address</th>
                                 <th class="indigo-text text-darken-4">Phone number</th>
                                 <th class="indigo-text text-darken-4">ident Number</th>
+                                
                                 <th class="indigo-text text-darken-4">Edite</th>
                                 <th class="indigo-text text-darken-4">Delete</th>
                                  <th class="indigo-text text-darken-4">book</th>
@@ -67,9 +68,9 @@
                                 <td><c:out value="${ utilisateur.tel }" /></td>
                                 <td><c:out value="${ utilisateur.numId }" /></td>
                                 
-          <td> <a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
-          <td> <a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }" class="btn-floating btn-large waves-effect waves-light red light-2 "><i class="material-icons ">delete</i></a></td>
-       <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons ">hotel</i></a></td>
+                               <td> <a href="/Tpprojet/AffiClis?updateid=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons">edit</i></a></td>
+                             <td> <a href="/Tpprojet/AffiClis?deleteid=${ utilisateur.id }" class="btn-floating btn-large waves-effect waves-light red light-2 "><i class="material-icons ">delete</i></a></td>
+                            <td> <a href="/Tpprojet/ReserviCham?idCli=${ utilisateur.id }" class="btn-floating btn-large  waves-light  indigo darken-2"><i class="material-icons ">hotel</i></a></td>
                             
                             </tr>
                             </c:forEach>

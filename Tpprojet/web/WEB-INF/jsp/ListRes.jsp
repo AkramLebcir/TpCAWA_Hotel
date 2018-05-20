@@ -16,7 +16,7 @@
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Lists Reservations</title>
+        <title>JSP Page</title>
     </head>
     <body class="grey lighten-2">
         <%@ include file="navbar.jsp" %>

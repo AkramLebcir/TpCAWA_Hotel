@@ -20,7 +20,7 @@
 
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>book a room</title>
+        <title>JSP Page</title>
         <style>
             .card {
                 width:35%;

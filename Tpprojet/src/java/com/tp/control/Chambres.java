@@ -48,9 +48,7 @@ public class Chambres {
                 String nomLit = resultat.getString("nomLit");
                 String prix = resultat.getString("prix");
                 String dispo = resultat.getString("dispo");
-//                String dureedebut = resultat.getString("dureedebut");
-//                String dureefin = resultat.getString("dureefin");
-                
+             
                 Chambre Chambre = new Chambre();
                 Chambre.setId(id);
                 Chambre.setNum(num);
@@ -58,9 +56,7 @@ public class Chambres {
                 Chambre.setNomLit(nomLit);
                 Chambre.setPrix(prix);
                 Chambre.setDispo(dispo);
-//                Chambre.setDureedebut(dureedebut);
-//                Chambre.setDureefin(dureefin);
-                
+              
                 Chambres.add(Chambre);
             }
         } catch (SQLException e) {

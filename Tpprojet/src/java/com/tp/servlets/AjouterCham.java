@@ -26,6 +26,7 @@ public class AjouterCham extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            // envoyer a la jsp AjouterCham
              request.setAttribute("varcham", "Add");   
              RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AjouterCham.jsp");
              rd.forward(request, response);

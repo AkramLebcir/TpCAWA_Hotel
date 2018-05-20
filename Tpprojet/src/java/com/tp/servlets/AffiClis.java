@@ -29,7 +29,7 @@ public class AffiClis extends HttpServlet {
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Clients tableClient = new Clients();
     
-        
+        // supprerimr client
         try{
             if(!request.getParameter("deleteid").isEmpty()){
                 String id = request.getParameter("deleteid");
@@ -39,7 +39,7 @@ public class AffiClis extends HttpServlet {
             }
         }catch(Exception e){}
        
-        
+         //clicer modiefie : envoyer a la page ajouter client( formulair )
         try{
             if(!request.getParameter("updateid").isEmpty()){
 
@@ -55,7 +55,7 @@ public class AffiClis extends HttpServlet {
      
             }
         }catch(Exception e){}
-        
+        // sinon afficher la liste ds clinet 
         request.setAttribute("Clients", tableClient.recupererClients(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
                         rd.forward(request, response);
@@ -63,7 +63,8 @@ public class AffiClis extends HttpServlet {
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        
+        // recuper les champ de form
+       
         String NumId   = request.getParameter("numId");
         String nom     = request.getParameter("nom");
         String prenom  = request.getParameter("prenom");
@@ -76,6 +77,7 @@ public class AffiClis extends HttpServlet {
         Idv=0;
         Clients tableClient = new Clients();
         
+        //  modifie ou ajoute client dans la bdd
             if(ajo_mod){
             tableClient.ajouterClient(client, request);
             }else{
@@ -83,7 +85,7 @@ public class AffiClis extends HttpServlet {
             }
             ajo_mod=true;
       
-       
+       // affichee la list des clients
         request.setAttribute("Clients", tableClient.recupererClients(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherClis.jsp");
         rd.forward(request, response);

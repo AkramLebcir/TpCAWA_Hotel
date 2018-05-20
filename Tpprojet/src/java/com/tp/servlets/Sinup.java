@@ -28,6 +28,7 @@ public class Sinup extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session= request.getSession();
+        // deconnecter de la session et envoyer vers la page login
         session.invalidate();
         RequestDispatcher dispatcher=request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

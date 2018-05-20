@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
     <head>
-        <title>Home</title>
+        <title>Menu</title>
      
 
         <!--Import Google Icon Font-->
@@ -72,7 +72,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2018 Copyright Text
+            © 2014 Copyright Text
             <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>

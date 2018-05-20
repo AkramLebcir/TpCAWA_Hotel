@@ -34,11 +34,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author alilo
  */
 public class ReserviCham extends HttpServlet {
-
-   
-   
-   
-    @Override
+  @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Chambres c=new Chambres();
@@ -78,12 +74,31 @@ public class ReserviCham extends HttpServlet {
             throws ServletException, IOException{ 
          boolean testClientId=false;
          // recupere les valeur de form
-         
+           Chambres tablechambre = new Chambres();
         String idcli= request.getParameter("Idcl");
         String nbrLit=request.getParameter("IdCh");
         String dateD= request.getParameter("dateD");
         String dateF= request.getParameter("dateF");
         String idch= request.getParameter("chambre");
+        
+        
+        
+        if(idch.isEmpty()){
+            
+            request.setAttribute("err", "choisir chambre libre");
+           request.setAttribute("Clientslib", tablechambre.recupererChambresLib(request));
+          RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/reservation.jsp");
+                        rd.forward(request, response); 
+                        
+            
+        }
+        
+        
+        
+        
+        
+        
+        
         
        // tester si le client exist dans la bdd
         Clients c= new Clients();
@@ -94,15 +109,14 @@ public class ReserviCham extends HttpServlet {
                 testClientId=true;
             }
         }
-        
-         
-        
+ 
         if(testClientId==false){
           request.setAttribute("dateD", dateD);
           request.setAttribute("dateF", dateF);
           request.setAttribute("dateD", dateD);
           request.setAttribute("nbrLit", nbrLit);
           request.setAttribute("err", "le client n exist pas");
+           request.setAttribute("Clientslib", tablechambre.recupererChambresLib(request));
           RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/reservation.jsp");
                         rd.forward(request, response); 
         }
@@ -110,7 +124,8 @@ public class ReserviCham extends HttpServlet {
         
        // tester si la date debut avant la date fin
         
-       SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM-dd"); //Pour déclarer les valeurs dans les nouveaux objets Date, employez le même format de date que pour créer des dates
+       SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM-dd");
+       //Pour déclarer les valeurs dans les nouveaux objets Date, employez le même format de date que pour créer des dates
         try {
             Date date1 = sdf.parse(dateD); 
             Date date2 = sdf.parse(dateF);
@@ -125,22 +140,16 @@ public class ReserviCham extends HttpServlet {
             Logger.getLogger(ReserviCham.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
-        
-       
-        
-        
-    
-        
+   
         List<Chambre> chambres= new ArrayList<Chambre>();
-        Chambres tablechambre = new Chambres();
+      
         
         request.setAttribute("Clientslib", tablechambre.recupererChambresLib(request));
         
         chambres=tablechambre.recupererChambresLib(request);
         reservations tabR= new reservations();
         
-     // verfication de nombre de lit dans les chambre dispnible
+     // verfication de nombre de lit dans les chambre dispnible et la chambre choisir 
         
         for (int i = 0; i < chambres.size(); i++) {
            if(Integer.parseInt(chambres.get(i).getNomLit())>=Integer.parseInt(nbrLit)&&chambres.get(i).getId()==Integer.parseInt(idch)) {

@@ -21,7 +21,7 @@
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/togel.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>${varcham} room</title>
+        <title>Ajouetr Page</title>
         <style>
             .card {
                 width:35%;
@@ -45,8 +45,7 @@
             <!-- Card body -->
             <div class="card-content">
                 <legend><center><h2>${varcham} room</h2></center></legend>
-             <!--   <p id="profile-name" class="profile-name-card" d>${chambre.getId()}</p>-->
-                <br><br>
+                <p id="profile-name" class="profile-name-card" d>${chambre.getId()}</p>
               
                 <!-- Material form register -->
                 <div class="input-field col s12">

@@ -31,7 +31,7 @@ public class Home extends HttpServlet {
           String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
               
                  if(!user.isEmpty()) {
-                    if(user.equalsIgnoreCase("alilo")||user.equalsIgnoreCase("akram")){
+                    if(user.equalsIgnoreCase("Ali")||user.equalsIgnoreCase("akram")){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/home.jsp");
@@ -70,26 +70,26 @@ public class Home extends HttpServlet {
            HttpSession session = request.getSession();
            session.setAttribute("user", user);
            session.setAttribute("pass", pass);
-          String Eroor= new String("Les mots de passe entrés sont différents, merci de les saisir à nouveau.") ;
+          String Eroor= new String("The password entered are different, please enter them again.") ;
               
             /* verification de champ de formulair */
                  if(!user.isEmpty()) {
                   /* verification de login */
                      
-      if((user.equalsIgnoreCase("alilo")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram") && pass.equalsIgnoreCase("root"))){
+      if((user.equalsIgnoreCase("Ali")&&pass.equalsIgnoreCase("alilo"))||(user.equalsIgnoreCase("akram") && pass.equalsIgnoreCase("root"))){
                       request.setAttribute("user", user);
                       request.setAttribute("ERR", "");
                         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/home.jsp");
                         rd.forward(request, response);
                     } 
-                    else{
+                    else{// message eror
                         request.setAttribute("ERR", Eroor);
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                         session.invalidate();
                     }
                  }
-                 else{
+                 else{// message eror
                      request.setAttribute("ERR", "remplir les chamep");
                          RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);

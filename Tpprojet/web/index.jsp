@@ -17,7 +17,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page 2</title>
+        <title>authentication</title>
         
         
         <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
@@ -102,12 +102,12 @@
              <p id="profile-name" class="profile-name-card">${ERR}</p>
                <div class="input-field col s12">
                    <i class="material-icons prefix">person</i>
-                <input id="user" name="user" type="text" class="validate">
+                <input id="user" name="user" type="text" class="validate" required>
                 <label for="user">Username</label>
                </div>
                <div class="input-field col s12">
                    <i class="material-icons prefix">lock_open</i>
-                <input id="pass" name="pass" type="password" class="validate">
+                   <input id="pass" name="pass" type="password" class="validate" required>
                 <label for="user">Password</label>
                </div>
                

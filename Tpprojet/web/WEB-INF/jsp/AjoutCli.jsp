@@ -20,7 +20,7 @@
 
        <link type="text/css" rel="stylesheet" href="/Tpprojet/css/minimal.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>${varcham} consomer</title>
+        <title>JSP Page</title>
         <style>
             .card {
                 width:35%;
@@ -45,13 +45,12 @@
         <div class="card-content ">
 
         <!-- Form Name -->
-        <legend><center><h2>${varcham} Customer</h2></center></legend>
+        <legend><center><h2>${varcham} consomer</h2></center></legend>
 
         <!-- Text input-->
         <p id="profile-name" class="profile-name-card">${ERRCh}</p>
-        <br><br>
        
-    <!--   <p id="profile-name" class="profile-name-card" name="id"><c:out value="${client.id}"/></p>-->
+       <p id="profile-name" class="profile-name-card" name="id"><c:out value="${client.id}"/></p>
 
         <div class="input-field col s12">
             <i class="material-icons prefix">person</i>
@@ -326,8 +325,10 @@
             <option value="Zimbabwe">Zimbabwe </option>
         
             </select>
-  
- </div>
+
+            
+
+        </div>
         <!-- Text input-->
         <div class="input-field col  s12">
             <i class="material-icons prefix">add_location</i>

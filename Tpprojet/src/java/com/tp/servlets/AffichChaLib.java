@@ -26,6 +26,7 @@ public class AffichChaLib extends HttpServlet {
  boolean ajo_mod=true;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Chambres tableChambre = new Chambres();
+        // supprerimr chambre
         try{
             if(!request.getParameter("deleteid").isEmpty()){
                 String id = request.getParameter("deleteid");
@@ -34,6 +35,7 @@ public class AffichChaLib extends HttpServlet {
                 
             }
         }catch(Exception e){}
+         //clicer modiefie : envoyer a la page ajouter chambre( formulair )
         try{
             if(!request.getParameter("updateid").isEmpty()){
                 String id = request.getParameter("updateid");
@@ -48,17 +50,15 @@ public class AffichChaLib extends HttpServlet {
             }
         
         }catch(Exception e){}
-        
-        
-        
-       
-        
-        request.setAttribute("Chambres", tableChambre.recupererChambres(request));
+    
+        // sinon afficher la liste ds chambre 
+       request.setAttribute("Chambres", tableChambre.recupererChambres(request));
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
         rd.forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        // recuper les champ de form
         String id =request.getParameter("id");
         String num = request.getParameter("num");
         String etage = request.getParameter("etage");
@@ -68,6 +68,7 @@ public class AffichChaLib extends HttpServlet {
         
             Chambre chambre = new Chambre(Idv,num,etage,nomLit,prix,"1",-1);
             Chambres tableChambre = new Chambres();
+          //  modifie ou ajoute chambre dans la bdd
             if(ajo_mod){
             tableChambre.ajouterChambre(chambre, request);
             }else{
@@ -75,7 +76,7 @@ public class AffichChaLib extends HttpServlet {
             }
              Idv=0;
             ajo_mod=true;
-          
+          // affichee la list des chambre
             request.setAttribute("Chambres", tableChambre.recupererChambres(request));
             RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/AfficherCha.jsp");
             rd.forward(request, response);
