@@ -210,6 +210,8 @@ public class Chambres {
         return Chambre;
     }
        
+       
+       
          public List<Chambre> recupererChambresLib(HttpServletRequest request) {
         List<Chambre> Chambres = new ArrayList<Chambre>();
         Statement statement = null;
